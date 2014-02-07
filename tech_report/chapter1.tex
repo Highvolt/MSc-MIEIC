@@ -43,9 +43,14 @@ The generated dataset (access log) must have the same attributes as the original
 
 This problem isn't trivial to solve and to better address it can be decomposed in smaller and simpler problems, such as:
 \begin{itemize}
-    \item Predict the users which stay.
-    \item Predict the profile of users which get in.
-    \item 
+    \item The prediction of users who will reappear in the future. This future appearances need to be completely characterized, including 
+      all the parameters that compose an entry in a dataset. This analysis will also allow the identification of users who will disappear in 
+      future. This sub-problem will be the first problem to be addressed in this dissertation work. Here will be used clustering algorithms to 
+      identify users who will no continue to appear on future entries and instance based algorithms to select future entries. A more detailed information
+      on this problem will be presented on chapter~\ref{chap:sota} in section -------TO BE COMPLETED-------.
+    \item Generate users that never appeared in the past based on mean profiles of new entries in the past. The future dataset will never
+      be complete without the data from step. In this part, classification algorithms will be used, further developments will be presented in
+      chapter~\ref{chap:sota} in section -------TO COMPLETE-------.
 \end{itemize}
 
 \section{Report Structure} \label{sec:struct}

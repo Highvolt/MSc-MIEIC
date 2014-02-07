@@ -18,3 +18,4 @@ fi
 
 # Clean compilation files.
 make clean
+cp pdis-en.pdf techreport.pdf
