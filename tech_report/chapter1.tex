@@ -33,19 +33,23 @@ tempus. Sed scelerisque nisi nec sem.
 
 \section{Motivation and Goals} \label{sec:goals}
 
-The ultimate trend on online marketing campaigns bring a whole new set of limitations to the target user universe. Nowadays, some online ads can only
-be imprinted under a set of very specific requirements, for example, the users had to visit an e-commerce site in the last 24 hours. 
-This brings causality into the equation, creating a new paradigm that makes 
-the more traditional methods of prediction ineffective. To solve this problem, it's needed to predict the complete future data.
+In the last few years, the online marketing campaigns have been evolving in such a way that today, these campaigns have a very well defined target.
+In the past to predict the impact of a campaign metrics like unique users and total number of access to the work were enough but, with this more precise pin point 
+of the target population the results given by the classical approach were useless.
+Nowadays, some online ads can only be imprinted if a set of very specific requirements has been fulfilled, for example,
+the users had to visit an e-commerce site in the last 24 hours. This brings causality into the equation, creating a new paradigm that makes 
+the more traditional methods of prediction ineffective. To solve this problem, it's needed to predict the complete future data, so this generated data
+can be used in simulations and the online campaigns can run on top of the future population.
 
 The objective of this thesis is to develop a library capable of generating future access logs using past data from the same network.
 The generated dataset (access log) must have the same attributes as the original.
 
 This problem isn't trivial to solve and to better address it can be decomposed in smaller and simpler problems, such as:
 \begin{itemize}
-    \item Predict which users will reappear in the future. Future reappearances need to be completely characterized, including 
-      all the parameters that compose an entry in the dataset. Solving this sub-problem also implies the identification of users who
-      won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
+    \item Predict individuals of the original population which will reappear in the future. Future reappearances need to be completely characterized, including 
+      all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid an obey to the parameter
+      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identification
+      of users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
       Clustering algorithms will be explored to predict churn users and instance-based algorithms to select future entries. A more detailed information
       on this problem will be presented on chapter~\ref{chap:sota} in section -------TO BE COMPLETED-------.
     \item Predict new instances which had never appeared in the past entries of the dataset.
@@ -56,13 +60,10 @@ This problem isn't trivial to solve and to better address it can be decomposed i
 
 \section{Report Structure} \label{sec:struct}
 
-Para além da introdução, esta dissertação contém mais x capítulos.
-No capítulo~\ref{chap:sota}, é descrito o estado da arte e são
-apresentados trabalhos relacionados. 
-%\todoline{Complete the document structure.}
-No capítulo~\ref{chap:chap3}, ipsum dolor sit amet, consectetuer
-adipiscing elit.
-No capítulo~\ref{chap:chap4} praesent sit amet sem. 
-No capítulo~\ref{chap:concl}  posuere, ante non tristique
-consectetuer, dui elit scelerisque augue, eu vehicula nibh nisi ac
-est. 
+Besides this first introdutory chapter this report is divided in three additional chapters.
+In Chapter~\ref{chap:sota}, a some basics of about online marketing are explained. In addition, it is also detailed the state of the art of
+predicting a traffic on networks, data mining algorithms that can help this kind of problems. Lastly, there is
+a small conclusion of which of those methods seem more fit to help solve this problem.
+Chapter~\ref{chap:chap3} focus is the main steps that needed to be taken during the development of this thesis. A schedule of the work is also
+presented on this chapter.
+Chapter~\ref{chap:chap4} sums up the report giving a better context of all the review done in the final project.
