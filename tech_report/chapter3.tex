@@ -14,6 +14,42 @@ The planning is divided in the four following stages:
 - Application of the best approach identified in the tests.
 - Writing of the dissertation.
 
+\begin{figure}[!ht]
+  \begin{center}
+
+    \begin{ganttchart}[
+      y unit title=0.6cm,
+      y unit chart=0.7cm,
+      x unit=0.8cm,
+      vgrid,hgrid,
+      title height=1,
+      bar/.style={fill=gray!50},
+      progress label text={},
+      bar height=0.4]{12}
+
+      % Time labels
+      \gantttitle{2014}{12} \\
+      \gantttitle{February}{2}
+      \gantttitle{March}{2}
+      \gantttitle{April}{2}
+      \gantttitle{May}{2}
+      \gantttitle{June}{2}
+      \gantttitle{July}{2} \\
+
+      % Tasks
+      \ganttbar{Information system development}{2}{4} \\
+      \ganttbar{Assembly pipeline development}{4}{5} \\
+      \ganttbar{Web platform development}{5}{6} \\
+      \ganttbar{Transcriptome assembly}{7}{9} \\
+      \ganttbar{Transcriptome analysis}{8}{10} \\
+      \ganttbar{Thesis writing}{9}{11}
+      \ganttbar[bar/.style={fill=gray!20}]{}{2}{8}
+
+    \end{ganttchart}
+  \end{center}
+  \caption[Work distribution planning]{Work distribution planning.}
+  \label{fig:gantt}
+\end{figure}
 %PLANEAR COMO DISTRIBUIR AS FASES e pôr mais lodo em cada uma
 
 \section{Experimental Data}
