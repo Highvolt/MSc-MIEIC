@@ -124,6 +124,15 @@ There are many algorithms that implement the decision tree principles, such as I
 
 \subsubsection{Random Forests}
 
+Random Forests \cite{raey} are an ensemble learning method for classification and regression that operates by generating a given number of 
+decision trees from randomly selected uniform subset of the complete training dataset, where the subset distribution is the same across the forest.
+Then at each node the best variable is chosen, using an objective function (similar to what is done in decision trees), and a binary split is done.
+This process continues until the trees are fully expanded, there is no pruning of the trees.
+
+Random Forests are robust and fairly able to deal with unbalance and missing data on the datasets. It is easy to set up with very little parameters
+to configure, it also gives good results even if the default parameters are used. The biggest limitation of this algorithm is when used for regression
+cannot predict beyond the range of the training data, because randomly selected inputs give better results in classification than regression \cite{raey}.
+
 \subsubsection{Support Vector Machines}
 
 \subsubsection{KNN}
