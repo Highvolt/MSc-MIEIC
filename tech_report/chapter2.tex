@@ -177,8 +177,36 @@ better performance in classifying text.
 
 \subsection{Clustering Algorithms}\label{sec:clust}
 
+Clustering is the process of grouping similar entries/objects into different groups, in other words it's the method to break a set into various subsets according to some
+metric. This groups/subsets are not known from the start.
+
+Clustering is sometimes considered the most important unsupervised learning problem\cite{DBLP:journals/corr/abs-1205-1117}.
+
+Clustering methods can be divided in\cite{HanKam06}:
+\begin{itemize}
+\item \textbf{Partitioning Methods} start with an initial number of groups, and reallocates iteratively the elements on the groups
+to convergence\cite{DBLP:journals/corr/abs-1205-1117}. Some examples of partitioning methods are based on heuristics like \emph{k-mean algorithm}
+and \emph{k-medoids algorithm}
+
+\item \textbf{Hierarchical Methods} work by grouping data into a tree of clusters\cite{HanKam06}. This methods can be further divided into two
+groups \emph{agglomerative}(bottom-up) and \emph{divisive}(top-down)\cite{DBLP:journals/corr/abs-1205-1117}. At the begin, on an \emph{agglomerative} algorithm
+each object is an cluster and this clusters merge with each other to form less, but larger clusters. The opposite occur for \emph{divisive} algorithms. The end 
+condition for both is a distance threshold.\cite{HanKam06}
+
+\item \textbf{Density-Based Methods} were developed to find clusters with odd forms relying on the premise that where the clusters are located in high density areas
+that are separated from each other by low density zones \cite{HanKam06}. Some examples of algorithms which implement this method are \emph{DBSCAN} and \emph{SSN}.
+
+\item \textbf{Grid-Based Methods} uses a multiresolution grid data structure. It divides the object space into a finite number of cells that
+form a grid structure on which all of the operations for clustering are performed. This approach has a fast processing time,
+which is typically independent of the number of data objects, but on other hand dependent of the number of cells per dimension on the object space\cite{HanKam06}.
+Some examples of algorithms which implement the rules of this method are \emph{STING},\emph{WaveCluster} and \emph{CLIQUE}.
+
+\item \textbf{Model-Based Clustering Methods} tries to understand the mathematical rule behind the data, in other words,
+''attempt to optimize the fit between the given data and some mathematical model''\cite[p. 429]{HanKam06}. This method assumes 
+that the data was generation with some underlying probability. Some examples of algorithms are \emph{Expectation-Maximization},
+\emph{Conceptual Clustering} and \emph{Neural Networks}.
+
+\end{itemize}
 %\subsection{Regression Algorithms}\label{sec:regr}
 
 \subsection{Instance-based regression algorithms}\label{sec:instance}
-
-\subsection{Time Series Analysis}\label{sec:timeseries}
