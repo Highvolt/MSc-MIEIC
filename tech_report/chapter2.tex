@@ -158,8 +158,22 @@ decomposing the problem in multiple binary class problems.\cite{Crammer:2002:AIM
 In the past few years, this method is also being used to classify internet traffic with excellent results.\cite{Yuan2010}
 
 
-
 \subsubsection{KNN}
+
+The \emph{k-nearest-neighbor} algorithm is among the more simple classification algorithms, it has been around since 1950s \cite[p.348]{HanKam06}.
+KNN is a non-parametric method which can be used in classification and regression problems, it is mostly used in the area of pattern recognition.
+This algorithm is a type of instance-based learning, or lazy learning, which mean that every computation is deferred until classification. By deferring 
+computation to classification phase this algorithm slow classifying instances. To classify an new instance, the algorithm has to calculate
+the \emph{Euclidean distance} between the new instance and every instance in the training set.
+
+Since introduction of this algorithm some variations of this algorithm appeared to help solve the short comings of \emph{kNN}.\cite{DBLP:journals/corr/abs-1007-0085}
+The more notable are:
+\begin{itemize}
+\item \textbf{Clustered k nearest neighbor} \cite{journals/jcp/ZhouLX09} it is an improved version of k-nn mixed with clustering algorithm, this allow for example 
+better performance in classifying text.
+\item \textbf{k-d tree nearest neighbor (kdNN)} \cite{Sproull1991} helps to improve the completion time of the classification in logarithmic time in some cases.
+\item \textbf{Orthogonal Search Tree Nearest Neighbor} \cite{955110} greatly improves efficiency of k-nn especially for large datasets.
+\end{itemize}
 
 \subsection{Clustering Algorithms}\label{sec:clust}
 
