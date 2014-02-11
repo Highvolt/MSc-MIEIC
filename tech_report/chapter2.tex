@@ -70,37 +70,38 @@ better access its value.
 . Furthermore, consists in a vast number of techniques used to find interesting patterns in large datasets and translate
 that huge quantity of raw data in information and/or knowledge. 
 
-Data mining uses techniques from various fields mostly from mathematics and computer science,
-some of the examples are artificial intelligence, machine learning and statistics.
+Data mining uses techniques from various fields, mostly from mathematics and computer science,
+such as artificial intelligence, machine learning and statistics.
 Data mining is sometimes referred as the natural evolution of information technologies \cite[p. 1]{HanKam06}
 
-There are lots of methods of data mining, sometimes these methods can be separated in two groups
-descriptive data mining and predictive data mining\cite{Fayyad96knowledgediscovery}.
-The main focus of first group is to find the underlying structure of a given data set. These methods try to find relationship and connections
-between the values, without have any goal on predicting the future. On the other hand,
-predictive data mining is to predict explicit values from patterns found on the original data set. These methods are used to build models based on past
+There are lots of methods of data mining, which can be separated in two groups: descriptive data mining and predictive
+data mining \cite{Fayyad96knowledgediscovery}.
+The main focus of the first group is to find the underlying structure of a given dataset, which methods try to find relationships and connections
+between the values, without have the goal of predicting the future. On the other hand,
+predictive data mining goal is to predict explicit values from patterns found on the original data set. These methods are used to build models based on past
 events that can be used to predict future events.
-This division is not always sharp in some cases an algorithm mixes the two methods (predictive \& descriptive)\cite{Fayyad96knowledgediscovery}.
+This division is not always sharp and in some cases an algorithm mixes the two methods (predictive \& descriptive)\cite{Fayyad96knowledgediscovery}.
 
-By what is said before it is easy to notice that data mining doesn't apply only to one set of problems but can be used to solve many different types of
+According to previous statements it is easy to notice that data mining doesn't apply only to one set of problems and can be used to solve many different types of
 problems. The most common methods are:
 \begin{itemize}
 \item \textbf{Anomaly Detection} tries to discover abnormal data on the dataset. This can be useful for identifying suspicious activity on a bank
 account log for example.
 \item \textbf{Classification} is a method to identify which of a given set of categories a new observation belongs.
-\item \textbf{Clustering} is the method of grouping similar data together in a finite number of categories without prior knowledge of
+\item \textbf{Clustering} is the method of grouping similar data together, in a finite number of categories, without prior knowledge of
 the characteristics of each group or the data.
 \item \textbf{Dependency modeling} tries to find associations between variables. For example, trying to find out which clothes go well together.
-\item \textbf{Summarization} is a method to provide a overview of the dataset, sometimes including visual representation and/or report generation.
-\item \textbf{Regression} tries to find a function which can represent a given dataset with the least error associated.
+\item \textbf{Summarization} is a method to provide an overview of the dataset, sometimes including visual representation and/or report generation.
+\item \textbf{Regression} tries to find a function that can represent a given dataset with the least error associated.
 \end{itemize}
 
 \subsection{Classification Algorithms}\label{sec:classification}
 
 \subsubsection{Decision Trees}
 
-Decision trees algorithms use a decision tree as a predictive model where all internal nodes (non-leaf nodes) are a test for the value of an attribute the value of this attribute will
-ultimately lead to a leaf node with the class attribute value (see example in figure~\ref{fig:dtree}) . In other words, the selection of the class value is only based on the attribute values of the entry.\cite{HanKam06}
+Decision trees algorithms use a decision tree as a predictive model where all internal nodes (non-leaf nodes) are a test for the value of an attribute that will
+ultimately lead to a leaf node with the class attribute value (see example in figure~\ref{fig:dtree}).
+In other words, the selection of the class value is only based on the attribute values of the entry.\cite{HanKam06}
 
 \begin{figure}[h]
   \begin{center}
