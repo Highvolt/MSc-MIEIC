@@ -9,52 +9,52 @@ Lastly, it is done a review of data mining algorithms that can be used to solve 
 \section{Online Advertising Overview}
 
 Before entering in details about the state of the art of the technologies that can be used to
-help to solve the presented problem, it is better to explain some basic concepts about the world of online advertising.
+help solve the presented problem, it is better to explain some basic concepts about the world of online advertising.
 
 All advertising has the main purpose of getting a message to the people that will impact or influence them in some way,
 therefore the same goal is applied to online advertising.
 One of the metrics of advertising are impressions, which correspond to the number of times a user sees the message (the ad).\cite{kOA}
-\textbf{Ads} can present itself in various size\cite{kOA2}, forms and locations \cite{kOA3}, these characteristics are chosen both by the advertiser
-and the publisher to better serve its own purpose.
+\textbf{Ads} can present itself in various sizes\cite{kOA2}, forms and locations \cite{kOA3}, and these characteristics are chosen both by the advertiser
+and the publisher to better serve their purpose.
 \textbf{Campaigns} are composed by two big parts, which are the ads that compose it and the target population that they pretend to reach,
 including the rules of this targeting. For example, \textbf{frequency capping} to limit the number of times the same advertising is shown to the user \cite{kOA},
-avoiding this way showing the same ad multiple times in a row to the same user, what can lead to a bad response from his part.\cite{Buchbinder20141}
+avoiding, in this way, showing the same ad multiple times in a row to the same user, that can lead to a bad response from his part.\cite{Buchbinder20141}
 
 Nowadays, the main pricing models of online advertising are:
 \begin{itemize}
 \item\textbf{Cost-per-Mile} where the advertiser pays per impression. The main problem of this model is the advertiser as to pay to the publisher even
 if the ad doesn't lead to any profit.
-\item\textbf{Cost-per-Click} where the advertiser pays per click to the publisher. This model is more expensive per unit\cite{Performics}, but on overall can me more
-profitable\cite{Performics} if the audience of the websites were the ad is imprinted is more interested in that kind of product/service\cite{Andrea2004}.
-\item\textbf{Cost-per-lead} where the advertiser pays for a lead. If this model is being used the advertiser doesn't not pay per number of impressions nor per clicks,
-only pays if he gets valid information of the user, like filling a sign up form for a community.
+\item\textbf{Cost-per-Click} where the advertiser pays per click to the publisher. This model is more expensive per unit\cite{Performics}, but on overall can be more
+profitable\cite{Performics} if the audience of the websites where the ad is imprinted is more interested in that kind of product/service\cite{Andrea2004}.
+\item\textbf{Cost-per-lead} where the advertiser pays for a lead. If this model is being used the advertiser doesn't pay per number of impressions nor per clicks. Instead, pays only
+if he gets valid information about the user, like the information of a sign up form for a community.
 \item\textbf{Cost-per-Action} or \textbf{Cost-per-Order} where the advertiser is charged per buy or action. This model is similar to CPL but has in mind an instantaneous return of
 the investment.
 \end{itemize}
 
-Traditionally publishers sell their space to advertisers in bulk (\textbf{Ad networks}), this method has its \textit{ups} and \textit{downs}.
-The obvious \textit{up} is sometimes the advertiser gets premium spots at low prices.
-On the other hand, one of the biggest drawbacks is as the advertiser buys the impressions as a
-closed package sometimes impressions are not maximized in terms of profit.
-Other problem of traditional methods is although the \emph{CPA} and \emph{CPL} pricing methods minimize the risk for the advertiser the responsibility of
-optimizing conversion rate\footnote{See, e.g., \url{http://www.marketingterms.com/dictionary/conversion_rate/}} still
+Traditionally, publishers sell their space to advertisers in bulk (\textbf{Ad networks}) this method has its \textit{ups} and \textit{downs}.
+The obvious \textit{up} is that sometimes the advertiser gets premium spots at low prices.
+On the other hand, one of the biggest drawbacks is that when the advertiser buys the impressions as a
+closed package, sometimes impressions are not maximized in terms of profit.
+Other problem of traditional methods that, although the \emph{CPA} and \emph{CPL} pricing methods minimize the risk for the advertiser, the responsibility of
+optimizing conversion rate\footnote{See, e.g., \url{http://www.marketingterms.com/dictionary/conversion_rate/}} is still
 on the ad network hands.\cite{Yuan:2013:RBO:2501040.2501980}
 
-In the past few years, a new model called \textbf{RTB}\index{Real Time Bidding}\index{RTB} has been gaining a terrain \cite{Adfonic}. 
+In the past few years, a new model called \textbf{Real Time Bidding}\index{Real Time Bidding}\index{RTB} has been gaining terrain \cite{Adfonic}. 
 There are three main players in the world of \emph{RTB}\index{Real Time Bidding}:
 \begin{itemize}
-\item\textbf{The Demand Side Platform}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
-their campaigns parameters and to monitor the performance of the campaign. This away the advertisers try to get the best performance of their campaigns and because 
+\item The\textbf{Demand Side Platform}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
+their campaigns' parameters and to monitor the performance of the campaign. This way the advertisers try to get the best performance of their campaigns because 
 \emph{DSPs} use algorithms driven by performance data.\cite{Gern201230}
-\item\textbf{The Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher, uses \textbf{Supply Side Platforms}.
+\item The\textbf{Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher uses \textbf{Supply Side Platforms}.
 \emph{SSPs} help the publisher to better manage his inventory, and even let him set a reserve price for their inventory.\cite{Yuan:2013:RBO:2501040.2501980}
-\item\textbf{The Ad Exchange} a little like a stock exchange, but in reality is a software platform that mediates the exchange. This exchange, takes place in
+\item The\textbf{Ad Exchange} looks a little like a stock exchange, but in reality is a software platform that mediates the exchange. This exchange takes place in
 a few milliseconds while the page loads.
 \end{itemize}
 
 \emph{RTB} allows some features of paid search advertising everywhere \cite{Gern201230}, because it allows the advertiser to better select
-the inventory\footnote{this inventory is made of user access to the websites that use some publisher} where he wants their campaigns to run on.
-The flexibility that \emph{RTB} gives to all the intervinients of this exchange is what demands the necessity of predict the future inventory, to
+the inventory\footnote{this inventory is made of user accesses} where he wants their campaigns to run on.
+The flexibility that \emph{RTB} gives to all the intervinients of this exchange is what demands the necessity of predicting the future inventory, to
 better access its value.
 
 
