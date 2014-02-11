@@ -17,7 +17,8 @@ One of the metrics of advertising are impressions, which correspond to the numbe
 \textbf{Ads} can present itself in various size\cite{kOA2}, forms and locations \cite{kOA3}, these characteristics are chosen both by the advertiser
 and the publisher to better serve its own purpose.
 \textbf{Campaigns} are composed by two big parts, which are the ads that compose it and the target population that they pretend to reach,
-including the rules of this targeting. For example, \textbf{frequency capping} to limit the number of times the same advertising is shown to the user \cite{kOA}.
+including the rules of this targeting. For example, \textbf{frequency capping} to limit the number of times the same advertising is shown to the user \cite{kOA},
+avoiding this way showing the same ad multiple times in a row to the same user, what can lead to a bad response from his part.\cite{Buchbinder20141}
 
 Nowadays, the main pricing models of online advertising are:
 \begin{itemize}
@@ -31,20 +32,31 @@ only pays if he gets valid information of the user, like filling a sign up form 
 the investment.
 \end{itemize}
 
-Traditionally publishers sell their space to advertisers in bulk, this method has its \textit{ups} and \textit{downs}. The obvious \textit{up} is sometimes the
-advertiser gets premium spots at low prices. On the other hand, one of the biggest drawbacks is as the advertiser buys the impressions as a
+Traditionally publishers sell their space to advertisers in bulk (\textbf{Ad networks}), this method has its \textit{ups} and \textit{downs}.
+The obvious \textit{up} is sometimes the advertiser gets premium spots at low prices.
+On the other hand, one of the biggest drawbacks is as the advertiser buys the impressions as a
 closed package sometimes impressions are not maximized in terms of profit.
+Other problem of traditional methods is although the \emph{CPA} and \emph{CPL} pricing methods minimize the risk for the advertiser the responsibility of
+optimizing conversion rate\footnote{See, e.g., \url{http://www.marketingterms.com/dictionary/conversion_rate/}} still
+on the ad network hands.\cite{Yuan:2013:RBO:2501040.2501980}
 
 In the past few years, a new model called \textbf{RTB}\index{Real Time Bidding}\index{RTB} has been gaining a terrain \cite{Adfonic}. 
 There are three main players in the world of \emph{RTB}\index{Real Time Bidding}:
 \begin{itemize}
 \item\textbf{The Demand Side Platform}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
-their campaigns parameters and to monitor the performance of the campaign.
+their campaigns parameters and to monitor the performance of the campaign. This away the advertisers try to get the best performance of their campaigns and because 
+\emph{DSPs} use algorithms driven by performance data.\cite{Gern201230}
 \item\textbf{The Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher, uses \textbf{Supply Side Platforms}.
-\emph{SSPs} help the publisher to better manage his inventory.
+\emph{SSPs} help the publisher to better manage his inventory, and even let him set a reserve price for their inventory.\cite{Yuan:2013:RBO:2501040.2501980}
 \item\textbf{The Ad Exchange} a little like a stock exchange, but in reality is a software platform that mediates the exchange. This exchange, takes place in
 a few milliseconds while the page loads.
 \end{itemize}
+
+\emph{RTB} allows some features of paid search advertising everywhere \cite{Gern201230}, because it allows the advertiser to better select
+the inventory\footnote{this inventory is made of user access to the websites that use some publisher} where he wants their campaigns to run on.
+The flexibility that \emph{RTB} gives to all the intervinients of this exchange is what demands the necessity of predict the future inventory, to
+better access its value.
+
 
 \section{Network Traffic Prediction}\label{sec:network}
 
