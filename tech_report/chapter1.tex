@@ -15,21 +15,18 @@ effective and more profitable. Using future user data the adtech industry is abl
 
 \section{Project} \label{sec:proj}
 
-Na continuação da secção anterior, e apenas no caso de ser um Projeto
-e não uma Dissertação, esta secção apresenta resumidamente o projeto.
+The project consists on a library capable of predicting the future access data logs based only on data logs of previous months.
+The hearth of the project consists on applying various data mining techniques to identify what will be the behavior of the users on the future,
+based on their behavior on the past.
 
-Nulla nec eros et pede vehicula aliquam. Aenean sodales pede vel
-ante. Fusce sollicitudin sodales lacus. Maecenas justo mauris,
-adipiscing vitae, ornare quis, convallis nec, eros. Etiam laoreet
-venenatis ipsum. In tellus odio, eleifend ac, ultrices vel, lobortis
-sed, nibh. Fusce nunc augue, dictum non, pulvinar sed, consectetuer
-eu, ipsum. Vivamus nec pede. Pellentesque pulvinar fringilla dolor. In
-sit amet pede. Proin orci justo, semper vel, vulputate quis, convallis
-ac, nulla. Nulla at justo. Mauris feugiat dolor. Etiam posuere
-fermentum eros. Morbi nisl ipsum, tempus id, ornare quis, mattis id,
-dolor. Aenean molestie metus suscipit dolor. Aliquam id lectus sed
-nisl lobortis rhoncus. Curabitur vitae diam sed sem aliquet
-tempus. Sed scelerisque nisi nec sem. 
+There are three main components on this project
+\begin{itemize}
+\item \textbf{The original dataset}, which is a CSV file with registry of access for a given network. Usually per entry, there is 
+  a time, a userID, a location ID, a URL and some additional parameters (cookies,etc. which may or may not be present from dataset to dataset).
+\item \textbf{A library capable of generating real like data} logs of future data based only on the past data. This is the work that will be developed during
+  this dissertation. The generation of this data logs must rely on the utilization of data mining techniques.
+\item \textbf{A simulator} capable of run campaigns over the generated dataset to give advertising performance metrics to compare with real data for validation.
+\end{itemize}
 
 \section{Motivation and Goals} \label{sec:goals}
 
