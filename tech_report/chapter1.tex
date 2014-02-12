@@ -7,32 +7,31 @@ The online marketing is a growing multibillion-dollar industry \cite{Pricewaterh
 which is expected to continue its fast growth.\cite{PricewaterhouseCoopers2013a}
 
 This industry is always trying to get more efficient by getting more profit from assets it already own. 
-Web users are the major assets of this industry, it makes money by exploiting the user behavior and characteristics, to target them with the
+Web users are the major assets of this industry, which makes money by exploiting the user behavior and characteristics, in order to target them with the
 perfect campaign. Each campaign has its own target parameters, which limit the target user universe.
-Online marketing industry core business is centered in web users, this industry has recorded almost every footprint each user makes on the web.
-Future footprints of the web users allow to measure the behavior of a upcoming campaign, with this data it is possible to make a campaign more
-effective and more profitable. Using future user data the adtech industry is able to fine tune its campaigns. 
+Online marketing industry core business is centered in web users and this industry has recorded almost every footprint each user makes on the web.
+Future footprints of the web users allows the measure of the behavior of a upcoming campaign and, with this data, it is possible to make a campaign more
+effective and more profitable. Therefore, using future user data allows the adtech industry to be able to fine tune its campaigns. 
 
 \section{Project} \label{sec:proj}
 
-The project consists on a library capable of predicting the future access data logs based only on data logs of previous months.
-The hearth of the project consists on applying various data mining techniques to identify what will be the behavior of the users on the future,
+The project consists of creating a library capable of predicting the future access data logs based only on data logs of previous months.
+The hearth of the project lies in applying various data mining techniques to identify what will be the behavior of the users on the future,
 based on their behavior on the past.
 
 There are three main components on this project
 \begin{itemize}
-\item \textbf{The original dataset}, which is a CSV file with registry of access for a given network. Usually per entry, there is 
-  a time, a userID, a location ID, a URL and some additional parameters (cookies,etc. which may or may not be present from dataset to dataset).
+\item \textbf{The original dataset}, which is a CSV file with registry of accesses for a given network. Usually, there is 
+  a time, an user ID, a location ID, a URL and some additional parameters (cookies,etc. which may or may not be present from dataset to dataset) per entry.
 \item \textbf{A library capable of generating real like data} logs of future data based only on the past data. This is the work that will be developed during
   this dissertation. The generation of this data logs must rely on the utilization of data mining techniques.
-\item \textbf{A simulator} capable of run campaigns over the generated dataset to give advertising performance metrics to compare with real data for validation.
+\item \textbf{A simulator} capable of running campaigns over the generated dataset, to give advertising performance metrics to compare with real data for validation.
 \end{itemize}
 
 \section{Motivation and Goals} \label{sec:goals}
 
-In the last few years, the online marketing campaigns have been evolving in such a way that today, these campaigns have a very well defined target.
-In the past to predict the impact of a campaign metrics like unique users and total number of access to the work were enough but, with this more precise pin point 
-of the target population the results given by the classical approach were useless.
+In the last few years, the online marketing campaigns have been evolving in such a way that, today, these campaigns have a very well defined target.
+In the past, were enough to predict the impact of a campaign according to its metrics, like unique users and total number of access to the ad but, this more precise pin point of the target population, turns the results given by the classical approach useless.
 
 Nowadays, some online ads can only be imprinted if a set of very specific requirements has been fulfilled, for example,
 the users had to visit an e-commerce site in the last 24 hours. This brings causality into the equation, creating a new paradigm that makes 
@@ -45,23 +44,21 @@ The generated dataset (access log) must have the same attributes as the original
 This problem isn't trivial to solve and to better address it can be decomposed in smaller and simpler problems, such as:
 \begin{itemize}
     \item Predict individuals of the original population which will reappear in the future. Future reappearances need to be completely characterized, including 
-      all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid an obey to the parameter
-      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identification
-      of users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
+      all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid and obey to the parameter
+      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identificationof users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
       Clustering algorithms will be explored to predict churn users and instance-based algorithms to select future entries. A more detailed information
-      on this problem will be presented on chapter~\ref{chap:sota} in section -------TO BE COMPLETED-------.
+      on this problem will be presented on chapter~\ref{chap:sota}.
     \item Predict new instances which had never appeared in the past entries of the dataset.
-      These instances will represent new user entries, to predict the profile of each user classification algorithms will be used, to select 
+      These instances will represent new user entries and, to predict the profile of each user, it will be used classification algorithms, in order to select 
       which past entries are relevant. Further information about these methods will be presented in
-      chapter~\ref{chap:sota} in section -------TO COMPLETE-------.
+      chapter~\ref{chap:sota}.
 \end{itemize}
 
 \section{Report Structure} \label{sec:struct}
 
-Besides this first introductory chapter this report is divided in three additional chapters.
-In Chapter~\ref{chap:sota}, a some basics of about online marketing are explained. In addition, it is also detailed the state of the art of
-predicting a traffic on networks, data mining algorithms that can help this kind of problems. Lastly, there is
+Besides this first introductory chapter, this report is divided in three additional chapters.
+In Chapter~\ref{chap:sota} it is explained some basic knowledge about online marketing. In addiction, there is
 a small conclusion of which of those methods seem more fit to help solve this problem.
-Chapter~\ref{chap:chap3} focus is the main steps that needed to be taken during the development of this thesis. A schedule of the work is also
+Chapter~\ref{chap:chap3} focus on the main steps that need to be taken during the development of this thesis. A schedule of the work is also
 presented on this chapter.
-Chapter~\ref{chap:chap4} sums up the report giving a better context of all the review done in the final project.
+Chapter~\ref{chap:chap4} sums up the report, giving a better context of all the review done in the final project.
