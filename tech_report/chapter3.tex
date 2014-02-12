@@ -2,61 +2,47 @@
 
 \section*{}
 
-The current chapter comprehends the work plan for the dissertation, including its activities and respective time frames. It will also be explained the datasets that will be used in the project.
+The current chapter comprehends the work plan for the dissertation, including its activities and respective time frames.
+It will also be explained the datasets that will be used in the project.
 
 \section{Planning}
 
-Given that the preparation phase is already finished, there will be approximately X MONTHS/WEEKS for the realization of the dissertation. That corresponds to a time frame between DATA X até DATA X. In order to complete the dissertation in the given time, it will be given more emphasis to the 
+Given that the preparation phase is already finished, there will be approximately 5 months for the realization of the dissertation.
+That corresponds to a time frame between February 2014 and July 2014. In order to complete the dissertation in the given time, it will be given more emphasis to the
+prediction of churn users and the prediction of users that continue in the future.
 
 The planning is divided in the four following stages:
-- Analysis and choice of the best approaches to the problem regarding what are the best data mining methods to test for a sample of results for the given problem.
-- Testing of the chosen approaches in order to indentify which ones could possibly give the best results.
-- Application of the best approach identified in the tests.
-- Writing of the dissertation.
+\begin{itemize}
+  \item Study, selection and testing of algorithms to predict the users that maintain.
+  \item Study, selection and testing of algorithms to predict the users that dropout.
+  \item Study, selection and testing of algorithms to predict new users.
+  \item Writing of the dissertation.
+\end{itemize}
 
-%\begin{figure}[!ht]
-  %\begin{center}
+\begin{figure}[h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.66\textwidth]{timeline}
+    \caption{Gantt chart}
+    \label{fig:Timeline}
+  \end{center}
+\end{figure}
 
-    %\begin{ganttchart}[
-      %y unit title=0.6cm,
-      %y unit chart=0.7cm,
-      %x unit=0.8cm,
-      %vgrid,hgrid,
-      %title height=1,
-      %bar/.style={fill=gray!50},
-      %progress label text={},
-      %bar height=0.4]{12}
 
-      %% Time labels
-      %\gantttitle{2014}{12} \\
-      %\gantttitle{February}{2}
-      %\gantttitle{March}{2}
-      %\gantttitle{April}{2}
-      %\gantttitle{May}{2}
-      %\gantttitle{June}{2}
-      %\gantttitle{July}{2} \\
-
-      %% Tasks
-      %\ganttbar{Information system development}{2}{4} \\
-      %\ganttbar{Assembly pipeline development}{4}{5} \\
-      %\ganttbar{Web platform development}{5}{6} \\
-      %\ganttbar{Transcriptome assembly}{7}{9} \\
-      %\ganttbar{Transcriptome analysis}{8}{10} \\
-      %\ganttbar{Thesis writing}{9}{11}
-      %\ganttbar[bar/.style={fill=gray!20}]{}{2}{8}
-
-    %\end{ganttchart}
-  %\end{center}
-  %\caption[Work distribution planning]{Work distribution planning.}
-  %\label{fig:gantt}
-%\end{figure}
 %PLANEAR COMO DISTRIBUIR AS FASES e pôr mais lodo em cada uma
 
 \section{Experimental Data}
 
-%FALAR SOBRE OS DATASETS USADOS -> qual o tipo, o que tem, características
+During the project it will be used multiple datasets from multiple sources containing ad requests. 
+Only one will be used at a time. 
+An ad request contains a timestamp, an user ID, a location ID and an URL plus a unknown number of
+additional parameters, such as, cookies, etc.
 
 \section{Thesis Work Evaluation}
 
-%DIZER COMO É QUE SE VAI AVALIAR A TESE -> presumo que seja o comparar os dados gerados com os dados futuros reais
-
+The results will be validate in various different ways:
+\begin{itemize}
+    \item by comparing the results with real data. For this, analytical methods of error calculation will be used.
+    \item by comparing the results with past data copied to the future.
+    \item by comparing the results with the tool that Shiftforward uses today.
+\end{itemize}
