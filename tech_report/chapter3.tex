@@ -19,13 +19,56 @@ The planning is divided in the four following stages:
   \item Writing of the dissertation.
 \end{itemize}
 
-\begin{figure}[h]
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=0.96\textwidth]{timeline}
-    \caption{Gantt chart}
-    \label{fig:Timeline}
-  \end{center}
+%\begin{figure}[h]
+  %\begin{center}
+    %\leavevmode
+    %\includegraphics[width=0.96\textwidth]{timeline}
+    %\caption{Gantt chart}
+    %\label{fig:Timeline}
+  %\end{center}
+%\end{figure}
+
+
+\begin{figure}[ftbp]
+\begin{center}
+
+\begin{ganttchart}[
+    %hgrid,
+    %vgrid,
+    %x unit=4mm
+      y unit title=0.6cm,
+      y unit chart=1.5cm,
+      x unit=0.8cm,
+      vgrid,hgrid,
+      title height=1,
+      bar/.style={fill=gray!50},
+      progress label text={},
+      newline shortcut=true,
+      bar label node/.append style={align=left},
+      bar height=0.4
+  ]{1}{12}
+    % Time labels
+      \gantttitle{2014}{12} \\
+      \gantttitle{February}{2}
+      \gantttitle{March}{2}
+      \gantttitle{April}{2}
+      \gantttitle{May}{2}
+      \gantttitle{June}{2}
+      \gantttitle{July}{2} \\
+
+      % Tasks
+      \ganttbar{Study, selection and testing of algorithms\ganttalignnewline
+      to predict the users that maintain}{2}{5} \\
+      \ganttbar{Study, selection and testing of algorithms\ganttalignnewline
+      to predict the users that dropout}{5}{7} \\
+      \ganttbar{Study, selection and testing of algorithms\ganttalignnewline
+      to predict new users}{7}{10} \\
+      \ganttbar{Writing of the dissertation}{7}{12} 
+      \ganttbar[bar/.style={fill=gray!20}]{}{4}{7}
+\end{ganttchart}
+
+\end{center}
+\caption{Gantt Chart}
 \end{figure}
 
 
