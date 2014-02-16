@@ -9,7 +9,7 @@ if [[ "$#" -eq 1 ]]; then
   if [[ "$1" =~ s|S ]]; then
     make pdis-en._show
   else
-    echo "Invalid argument"
+    make pdis-en
   fi
 
 else
@@ -19,3 +19,11 @@ fi
 # Clean compilation files.
 make clean
 cp pdis-en.pdf techreport.pdf
+
+if [[ "$#" -eq 1 ]]; then
+
+  if [[ "$1" =~ o|O ]]; then
+    open techreport.pdf
+  fi
+fi
+
