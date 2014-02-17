@@ -298,6 +298,7 @@ navigation in a more flexible way.
 Some testes have been made by the author \cite{Gery:2003:EWU:956699.956716} to
 test the performance of this three methods using real web logs. According to the
 results FS gives better accuracy than AR and FGS.
+
 In another paper, other author, proposes a model that preserves sequentiality of
 the clicks \cite{Frias-Martinez2003}. The rules maintain the squence of the
 click stream between the antecedent and the consequent, to maintain sequentiality.
@@ -308,6 +309,29 @@ which page will go to be accessed but when will it be accessed. The proposed
 model, \textbf{Customizable Sequential Behavior Model}, can be adapted depending
 on the characteristics of the server, in order to capture the behavior of the
 users more accurately.
+
+There is another approach that relies on the sequentially of the clicks
+\cite{Jan:2007:WUB:1353862.1353874}.
+This method uses the prefix set of web pages (pages that the user already had
+visited) to predict a postfix set (next pages that the user will visit), to
+select this pages the algorithm uses a confidence threshold to select the pages
+to the postfix set form historical data.
+
+The classification algorithm \textbf{Longest Common Subsequence} (LCS)
+\cite{4631852} it is also been used in web usage mining. In this case the author
+proposes a two part architecture, an offline part where knowledge is extracted
+from the historical data and an online part where this knowledge is used to
+predict next visits of the user. The prediction is done in the online part by
+appending the last request from the user to the history and using LCS. This
+architecture is implemented in \textbf{WebPum} \cite{Jalali20106201} by the same
+authors, this architecture improves the accuracy by a little margin from the
+previous method SUGGEST 3.0 \cite{1410804}, in next pages recommendations.
+
+In a more recent paper a method combining Markov model based sequential pattern
+mining with clustering is proposed \cite{Anitha_anew}. This combination gets
+about 12\% more accuracy when compared with traditional Markov model.
+The proposed models combines great accuracy from high order Markov Models with
+less space complexity from low order Markov models.
 
 
 %\subsection{Instance-based regression algorithms}\label{sec:instance}
