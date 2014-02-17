@@ -12,30 +12,62 @@ perfect campaign. Each campaign has its own target parameters, which limit the t
 Online marketing industry core business is centered in web users and this industry has recorded almost every footprint each user makes on the web.
 Future footprints of the web users allows the measure of the behavior of a upcoming campaign and, with this data, it is possible to make a campaign more
 effective and more profitable. Therefore, using future user data allows the adtech industry to be able to fine tune its campaigns. 
+Campaigns are composed by parameter definitions and rules and can be defined as
+queries over the ad requests data. So the ideal way to forecast the effectiveness
+of a campaign is by running these queries over generated ad requests data. This
+is why is so important to be able to generate future ad requests data.
+
+The most common platforms that will benefit from this data are Custom-built Ad
+Servers and \hyperref[itm:adex]{Exchanges}, \hyperref[itm:ssp]{Sell-side platforms} (SSPs) and
+\hyperref[itm:dsp]{Demand-side platforms}
+(DSPs). These platforms are further explored section~\ref{sec:adover}.
+
 
 \section{Project} \label{sec:proj}
 
-The project consists of creating a library capable of predicting the future access data logs based only on data logs of previous months.
-The hearth of the project lies in applying various data mining techniques to identify what will be the behavior of the users on the future,
-based on their behavior on the past.
+The main objective of this project is to develop a library capable of generating
+future ad requests logs from recorded past requests.
+To solve this problem multiple data mining classification and clustering
+techniques will be explored in order to find the fastest and more accurate way
+to do it. 
+This generator will use real ad request logs from various sources in CSV files.
+The generated files will need to respect the same structure as the given file.
 
-There are three main components on this project
-\begin{itemize}
-\item \textbf{The original dataset}, which is a CSV file with registry of accesses for a given network. Usually, there is 
-  a time, an user ID, a location ID, a URL and some additional parameters (cookies,etc. which may or may not be present from dataset to dataset) per entry.
-\item \textbf{A library capable of generating real like data} logs of future data based only on the past data. This is the work that will be developed during
-  this dissertation. The generation of this data logs must rely on the utilization of data mining techniques.
-\item \textbf{A simulator} capable of running campaigns over the generated dataset, to give advertising performance metrics to compare with real data for validation.
-\end{itemize}
+The focus of this thesis is only one part of a more complex problem, the
+forecast the behaviour of campaigns in the future. The resultant ad request log
+will be validated using a simulator supplied by ShiftForward.
+
+
+%The project consists of creating a library capable of predicting the future access data logs based only on data logs of previous months.
+%The hearth of the project lies in applying various data mining techniques to identify what will be the behavior of the users on the future,
+%based on their behavior on the past.
+
+%There are three main components on this project
+%\begin{itemize}
+%\item \textbf{The original dataset}, which is a CSV file with registry of accesses for a given network. Usually, there is 
+  %a time, an user ID, a location ID, a URL and some additional parameters (cookies,etc. which may or may not be present from dataset to dataset) per entry.
+%\item \textbf{A library capable of generating real like data} logs of future data based only on the past data. This is the work that will be developed during
+  %this dissertation. The generation of this data logs must rely on the utilization of data mining techniques.
+%\item \textbf{A simulator} capable of running campaigns over the generated dataset, to give advertising performance metrics to compare with real data for validation.
+%\end{itemize}
 
 \section{Motivation and Goals} \label{sec:goals}
 
-In the last few years, the online marketing campaigns have been evolving in such a way that, today, these campaigns have a very well defined target.
-In the past, were enough to predict the impact of a campaign according to its metrics, like unique users and total number of access to the ad but, this more precise pin point of the target population, turns the results given by the classical approach useless.
+In the last few years, the online marketing has been getting more complex. In
+such a way that, today campaigns have a very well defined target sometimes with
+a few hundreds sets of rules and limitations. This poses a big problem to
+simpler prediction models that normally doesn't predict all ad request
+parameters, this way limiting the parameters where queries can be done.
+
 
 Nowadays, some online ads can only be imprinted if a set of very specific requirements has been fulfilled, for example,
 the users had to visit an e-commerce site in the last 24 hours. This brings causality into the equation, creating a new paradigm that makes 
-the more traditional methods of prediction ineffective. To solve this problem, it's needed to predict the complete future data, so this generated data
+the more traditional methods of prediction ineffective. To solve this problem
+and to be able to get fast responses to complex queries of concurrent campaigns,
+simulate the algorithms executed by ad servers of the client
+and ultimately parallelize the computation of the results for the
+queries,
+predicting the complete future data. This generated data
 can be used in simulations and the online campaigns can run on top of the future population.
 
 The objective of this thesis is to develop a library capable of generating future access logs using past data from the same network.

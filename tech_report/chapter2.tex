@@ -4,7 +4,7 @@
 
 This chapter starts with an overview of online marketing in the last few years, followed by a review of the data mining algorithms that can be used to solve the same kind of problems as this thesis.
 
-\section{Online Advertising Overview}
+\section{Online Advertising Overview}\label{sec:adover}
 
 Before entering in details about the state of the art of the technologies that can be used to
 solve the presented problem, it is better to explain some basic concepts about the world of online advertising.
@@ -45,12 +45,12 @@ the best value for their space and advertisers get the best placement for their 
 
 There are three main players in the world of \emph{RTB}\index{Real Time Bidding}:
 \begin{itemize}
-\item The \textbf{Demand Side Platform (DSP)}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
+\item\label{itm:dsp} The \textbf{Demand Side Platform (DSP)}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
 their campaigns' parameters and to monitor the performance of the campaign. This way the advertisers try to get the best performance of their campaigns because 
 \emph{DSPs} use algorithms driven by performance data.\cite{Gern201230}
-\item The \textbf{Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher uses \textbf{Supply Side Platforms}.
+\item\label{itm:ssp} The \textbf{Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher uses \textbf{Supply Side Platforms}.
 \emph{SSPs} help the publisher to better manage his inventory, and even let him set a reserve price for their inventory.\cite{Yuan:2013:RBO:2501040.2501980}
-\item The \textbf{Ad Exchange} looks a little like a stock exchange, but in reality is a software platform that mediates the exchange. This exchange takes place in
+\item\label{itm:adex} The \textbf{Ad Exchange} looks a little like a stock exchange, but in reality is a software platform that mediates the exchange. This exchange takes place in
 a few milliseconds while the page loads.
 \end{itemize}
 
