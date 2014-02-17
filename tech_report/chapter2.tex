@@ -7,7 +7,7 @@ This chapter starts with an overview of online marketing in the last few years, 
 \section{Online Advertising Overview}
 
 Before entering in details about the state of the art of the technologies that can be used to
-help solve the presented problem, it is better to explain some basic concepts about the world of online advertising.
+solve the presented problem, it is better to explain some basic concepts about the world of online advertising.
 
 All advertising has the main purpose of getting a message to the people that will impact or influence them in some way,
 therefore the same goal is applied to online advertising.
@@ -20,13 +20,14 @@ avoiding, in this way, showing the same ad multiple times in a row to the same u
 
 Nowadays, the main pricing models of online advertising are:
 \begin{itemize}
-\item\textbf{Cost-per-Mile} where the advertiser pays per impression. The main problem of this model is the advertiser as to pay to the publisher even
+\item\textbf{Cost-per-Mile (CPM)} where the advertiser pays per impression. The main
+problem of this model is the advertiser must pay to the publisher even
 if the ad doesn't lead to any profit.
-\item\textbf{Cost-per-Click} where the advertiser pays per click to the publisher. This model is more expensive per unit\cite{Performics}, but on overall can be more
+\item\textbf{Cost-per-Click (CPC)} where the advertiser pays per click to the publisher. This model is more expensive per unit\cite{Performics}, but on overall can be more
 profitable\cite{Performics} if the audience of the websites where the ad is imprinted is more interested in that kind of product/service\cite{Andrea2004}.
-\item\textbf{Cost-per-lead} where the advertiser pays for a lead. If this model is being used the advertiser doesn't pay per number of impressions nor per clicks. Instead, pays only
+\item\textbf{Cost-per-lead (CPL)} where the advertiser pays for a lead. If this model is being used the advertiser doesn't pay per number of impressions nor per clicks. Instead, pays only
 if he gets valid information about the user, like the information of a sign up form for a community.
-\item\textbf{Cost-per-Action} or \textbf{Cost-per-Order} where the advertiser is charged per buy or action. This model is similar to CPL but has in mind an instantaneous return of
+\item\textbf{Cost-per-Action (CPA)} or \textbf{Cost-per-Order (CPO)} where the advertiser is charged per buy or action. This model is similar to CPL but has in mind an instantaneous return of
 the investment.
 \end{itemize}
 
@@ -38,13 +39,13 @@ Other problem of traditional methods that, although the \emph{CPA} and \emph{CPL
 optimizing conversion rate\footnote{ See, e.g., \url{http://www.marketingterms.com/dictionary/conversion_rate/}} is still
 on the ad network hands.\cite{Yuan:2013:RBO:2501040.2501980}
 
-In the past few years, a new model called \textbf{Real Time Bidding}\index{Real Time Bidding}\index{RTB} has been gaining terrain \cite{Adfonic}.
-\emph{RTB}, as the name gives, is a market where publishers offer his advertisement space and advertisers bid over it in real time. This allow publishers to get
+In the past few years, a new model called \textbf{Real Time Bidding (RTB)}\index{Real Time Bidding}\index{RTB} has been gaining terrain \cite{Adfonic}.
+\emph{RTB} is a market where publishers offer his advertisement space and advertisers bid over it in real time. This allow publishers to get
 the best value for their space and advertisers get the best placement for their advertisement.
 
 There are three main players in the world of \emph{RTB}\index{Real Time Bidding}:
 \begin{itemize}
-\item The \textbf{Demand Side Platform}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
+\item The \textbf{Demand Side Platform (DSP)}\index{DSP} is a tool used by the advertisers to act on their behalf on the \emph{RTB}. \emph{DSPs}\index{DSP} allows them to set
 their campaigns' parameters and to monitor the performance of the campaign. This way the advertisers try to get the best performance of their campaigns because 
 \emph{DSPs} use algorithms driven by performance data.\cite{Gern201230}
 \item The \textbf{Publisher} provides the inventory, that is comprised by accesses made by users. In some cases, the publisher uses \textbf{Supply Side Platforms}.
@@ -80,16 +81,18 @@ events that can be used to predict future events.
 This division is not always sharp and in some cases an algorithm mixes the two methods (predictive \& descriptive)\cite{Fayyad96knowledgediscovery}.
 
 According to previous statements it is easy to notice that data mining doesn't apply only to one set of problems and can be used to solve many different types of
-problems. The most common methods are:
+problems. The most common family of problem types are:
 \begin{itemize}
 \item \textbf{Anomaly Detection} tries to discover abnormal data on the dataset. This can be useful for identifying suspicious activity on a bank
 account log for example.
-\item \textbf{Classification} is a method to identify which of a given set of categories a new observation belongs.
-\item \textbf{Clustering} is the method of grouping similar data together, in a finite number of categories, without prior knowledge of
+\item \textbf{Classification} aims to identify which of a given set of
+categories a new observation belongs to.
+\item \textbf{Clustering} aims to grouping similar data together, in a finite number of categories, without prior knowledge of
 the characteristics of each group or the data.
 \item \textbf{Dependency modeling} tries to find associations between variables. For example, trying to find out which clothes go well together.
-\item \textbf{Summarization} is a method to provide an overview of the dataset, sometimes including visual representation and/or report generation.
-\item \textbf{Regression} tries to find a function that can represent a given dataset with the least error associated.
+\item \textbf{Summarization} provides an overview of the dataset, sometimes including visual representation and/or report generation.
+\item \textbf{Regression} tries to predict the value of a quantitative variable
+given a new observation.
 \end{itemize}
 
 \subsection{Classification Algorithms}\label{sec:classification}
@@ -113,28 +116,29 @@ Decision tree classifiers can be used in large datasets with high dimensional da
 One of its' main advantages due to its white box model of learning, is that at anytime it is possible to understand the reason behind each and every result.
 In addition to that, decision tree classifiers are very robust and require no prior knowledge of the domain or parameter settings.
 
-On the other hand, the problem of learning a optimal decision tree is NP-Complete \cite{Hyafil197615}.
+On the other hand, the problem of learning an optimal decision tree is NP-Complete \cite{Hyafil197615}.
 Therefore, in practical applications of decision tree learning algorithms, some heuristics need to be used,
 usually a greedy algorithm, which can lead
 to local optimal decisions being made for each node. The utilization of such algorithms cannot guarantee the global optimal solution to the problem.
-There are many algorithms that implement the decision tree principles, such as ID3, C4.5 and CART.
+There are many algorithms that implement the decision tree principles, such as ID3, C5.0 and CART.
 
 \subsubsection{Random Forests}
 
 Random Forests \cite{raey} are an ensemble learning method for classification and regression, that operates by generating a given number of 
-decision trees from a randomly selected uniform subset of the complete training dataset, where the subset distribution is the same across the forest.
-After that, at each node the best variable is chosen, using an objective function (similar to what is done in decision trees), and a binary split is done.
-This process continues until the trees are fully expanded and there is no pruning of the trees.
+decision trees from a randomly selected with replacement subset of the complete training dataset, where the subset distribution is the same across the forest.
+After that, at each node a randomly chosen subset of variables are used for the
+selection of the best split.
+This process continues until the trees are fully expanded. There is no pruning of the trees.
 
 Random Forests are robust and fairly able to deal with unbalanced and missing data on the datasets. It is easy to set up with very little configuration
-parameters and it also gives good results even if the default parameters are used. The biggest limitation of this algorithm is not being able to
+parameters and it also gives good results even when the default parameters are used. The biggest limitation of this algorithm is not being able to
 predict beyond the range of the training data when used for regression, because randomly selected inputs give better results in classification than regression \cite{raey}.
 
 \subsubsection{Support Vector Machines}
 
 Support Vector Machine (SVM) is a supervised learning algorithm with great results in pattern recognition.
 \cite{Cortes95support-vectornetworks} To achieve this results, SVMs rely on spatial division of classes. The division can be
-made without dimensional limit. In other words, the plane or hyperplane that separates the classes can have any number of dimensions. In the figure
+made without dimensional limit. In other words, the plane or hyperplane that separates the classes can have any number of dimensions. In figure
 ~\ref{fig:svm_nonlin} we can see an example of this multidimensional spatial division.
 
 %\cite{citeulike:989242}
@@ -160,10 +164,11 @@ In the past few years, this method is also being used to classify internet traff
 The \emph{k-nearest-neighbor} algorithm is among the most simple classification algorithms and it has been around since the 1950s \cite[p.348]{HanKam06}.
 KNN is a non-parametric method which can be used in classification and regression problems and it is mostly used in the area of pattern recognition.
 This algorithm is a type of instance-based learning, or lazy learning, which means that every computation is deferred until classification. By deferring 
-computation to classification phase this algorithm is slow at classifying instances. To classify a new instance, the algorithm has to calculate
+computation to the classification phase this algorithm is slow at classifying instances. To classify a new instance, the algorithm has to calculate
 the \emph{Euclidean distance} between the new instance and every instance in the training set.
 
-Since introduction of this algorithm, some variations of it appeared to help solve the shortcomings of \emph{kNN}.\cite{DBLP:journals/corr/abs-1007-0085}
+Since the introduction of this algorithm, some variations of it appeared to help
+solving the shortcomings of \emph{kNN}.\cite{DBLP:journals/corr/abs-1007-0085}
 The more notable are:
 \begin{itemize}
 \item \textbf{Clustered k nearest neighbor} \cite{journals/jcp/ZhouLX09} is an improved version of k-nn mixed with a clustering algorithm, which allow, for example, 
@@ -177,7 +182,7 @@ better performance in classifying text.
 Clustering is the process of grouping similar entries/objects into different groups, in other words, it is the method of breaking a set into various subsets according to some
 metric. This groups/subsets are not known from the start and clustering is sometimes considered the most important unsupervised learning problem\cite{DBLP:journals/corr/abs-1205-1117}.
 
-Clustering methods can be divided in\cite{HanKam06}:
+Clustering methods can be divided into\cite{HanKam06}:
 \begin{itemize}
 \item \textbf{Partitioning Methods} start with an initial number of groups, and reallocates iteratively the elements on the groups
 to convergence\cite{DBLP:journals/corr/abs-1205-1117}. Some examples of partitioning methods are based on heuristics like \emph{k-mean algorithm}
@@ -185,7 +190,7 @@ and \emph{k-medoids algorithm}.
 
 \item \textbf{Hierarchical Methods} work by grouping data into a tree of clusters\cite{HanKam06}. This methods can be further divided into two
 groups: \emph{agglomerative} (bottom-up) and \emph{divisive} (top-down)\cite{DBLP:journals/corr/abs-1205-1117}. At the beginning of an \emph{agglomerative} algorithm,
-each object is a cluster and this clusters merge with each other, to form less but larger clusters. The opposite occurs for \emph{divisive} algorithms. The end 
+each object is a cluster and these clusters merge with each other, to form less but larger clusters. The opposite occurs for \emph{divisive} algorithms. The end 
 condition for both is a distance threshold.\cite{HanKam06}
 
 \item \textbf{Density-Based Methods} were developed to find clusters with odd forms, relying on the premise that the clusters are located in high density areas
@@ -217,11 +222,11 @@ It was created at the University of Waikato, New Zealand in 1997. It has an easy
   \begin{center}
     \leavevmode
     \includegraphics[width=0.66\textwidth]{weka}
-    \caption{Screenshot of Weka \url{http://www.ibm.com/developerworks/library/os-weka1/weka-startup1.jpg}}
+    \caption{Screenshot of Weka \protect\footnotemark}
     \label{fig:RapidMiner}
   \end{center}
 \end{figure}
-
+\footnotetext{ \url{http://www.ibm.com/developerworks/library/os-weka1/weka-startup1.jpg}}
 
 \subsubsection{Apache Mahout}
 
@@ -253,11 +258,11 @@ a standalone GUI application.
   \begin{center}
     \leavevmode
     \includegraphics[width=0.66\textwidth]{rapidminer}
-    \caption{Screenshot of RapidMiner \url{http://mloss.org/media/screenshot_archive/rapidminer_collection.jpg}}
+    \caption{Screenshot of RapidMiner \protect\footnotemark}
     \label{fig:RapidMiner}
   \end{center}
 \end{figure}
-
+\footnotetext{ \url{http://mloss.org/media/screenshot_archive/rapidminer_collection.jpg}}
  Although it is a commercial product, there is also a free tier, and the core and earliest versions are open source. This application
 is one of the main players of this market and it is easily expandable through plug-ins available online.
 
@@ -271,6 +276,8 @@ R is a GNU tool, so it is completely free. There are wrappers to almost every la
 
 
 \section{Web Usage Mining}\label{sec:network}
+
+\nocite{UjwalaPatil}
 
 The main area which this project focus on the utilization of ad requests logs
 to predict future requests of the users. This is analogous to work
