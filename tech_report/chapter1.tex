@@ -70,21 +70,15 @@ queries,
 predicting the complete future data. This generated data
 can be used in simulations and the online campaigns can run on top of the future population.
 
-The objective of this thesis is to develop a library capable of generating future access logs using past data from the same network.
-The generated dataset (access log) must have the same attributes as the original.
+The objective of this thesis is to develop a library capable of generating
+future ad request logs using past data from the same network.
+This library will have as one of the main goals the prediction of all the parameters that characterize an
+ad request with the purpose of be able to query over any parameter, the
+generated dataset (ad requests log) must have the same attributes as the original.
 
-This problem isn't trivial to solve and to better address it can be decomposed in smaller and simpler problems, such as:
-\begin{itemize}
-    \item Predict individuals of the original population which will reappear in the future. Future reappearances need to be completely characterized, including 
-      all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid and obey to the parameter
-      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identificationof users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
-      Clustering algorithms will be explored to predict churn users and instance-based algorithms to select future entries. A more detailed information
-      on this problem will be presented on chapter~\ref{chap:sota}.
-    \item Predict new instances which had never appeared in the past entries of the dataset.
-      These instances will represent new user entries and, to predict the profile of each user, it will be used classification algorithms, in order to select 
-      which past entries are relevant. Further information about these methods will be presented in
-      chapter~\ref{chap:sota}.
-\end{itemize}
+The prediction of this kind of future data is rather complex since it is need to
+find out which users will going to appear in the future and which websites they
+will visit and when will they do it.
 
 \section{Report Structure} \label{sec:struct}
 

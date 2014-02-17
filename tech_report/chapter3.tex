@@ -8,24 +8,32 @@ It will also be explained the datasets that will be used in the project.
 \section{Planning}
 
 Given that the preparation phase is already finished, there will be approximately 5 months for the realization of the dissertation.
-That corresponds to a time frame between February 2014 and July 2014. In order to complete the dissertation in the given time, it will be given more emphasis to the
-prediction of churn users and the prediction of users that continue in the future.
+That corresponds to a time frame between February 2014 and July 2014.
 
-%\begin{figure}[h]
-  %\begin{center}
-    %\leavevmode
-    %\includegraphics[width=0.96\textwidth]{timeline}
-    %\caption{Gantt chart}
-    %\label{fig:Timeline}
-  %\end{center}
-%\end{figure}
+For what have been seen before this problem is rather complex. So to better
+address it, can be decomposed in smaller and simpler problems, such as:
+\begin{itemize}
+    \item Predict individuals of the original population which will reappear in the future. Future reappearances need to be completely characterized, including 
+      all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid and obey to the parameter
+      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identificationof users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
+      Clustering algorithms will be explored to predict churn users and instance-based algorithms to select future entries. A more detailed information
+      on this problem will be presented on chapter~\ref{chap:sota}.
+    \item Predict new instances which had never appeared in the past entries of the dataset.
+      These instances will represent new user entries and, to predict the profile of each user, it will be used classification algorithms, in order to select 
+      which past entries are relevant. Further information about these methods will be presented in
+      chapter~\ref{chap:sota}.
+\end{itemize}
 
+In order to complete the dissertation in the given time, it will be given more emphasis to the
+prediction of churn users and the prediction of users that continue in the
+future. Leaving the prediction of new instances for a later part of the
+development of this dissertation.
 
 \begin{figure}[h]
-\begin{center}
+  \begin{center}
 
-\begin{ganttchart}[
-    %hgrid,
+      \begin{ganttchart}[
+      %hgrid,
     %vgrid,
     %x unit=4mm
       y unit title=0.6cm,
@@ -57,19 +65,34 @@ prediction of churn users and the prediction of users that continue in the futur
       to predict new users}{7}{10} \\
       \ganttbar{Writing of the dissertation}{8}{12} 
       \ganttbar[bar/.style={fill=gray!20}]{}{4}{7}
-\end{ganttchart}
+    \end{ganttchart}
 
-\end{center}
+  \end{center}
 \caption{Gantt Chart}
+\label{fig:gantt}
 \end{figure}
 
-The planning is divided in the four following stages:
-\begin{itemize}
-  \item Study, selection and testing of algorithms to predict the users that maintain.
-  \item Study, selection and testing of algorithms to predict the users that dropout.
-  \item Study, selection and testing of algorithms to predict new users.
-  \item Writing of the dissertation.
-\end{itemize}
+The planning is divided in the four following stages, as we can see in figure~\ref{fig:gantt}:
+\begin{enumerate}
+  \item\label{itm:task1} Study, selection and testing of algorithms to predict the users that maintain.
+  \item\label{itm:task2} Study, selection and testing of algorithms to predict the users that dropout.
+  \item\label{itm:task3} Study, selection and testing of algorithms to predict new users.
+  \item\label{itm:task4} Writing of the dissertation.
+\end{enumerate}
+
+The problem of predict which users present in the original dataset will remain
+in the future will be addressed in stage~\ref{itm:task1}. To complete the
+information generated on this stage it is also needed to forecast the value of
+each parameter that represents an entry on the ad request log file. The period
+alloted for the completion of this stage is 8 weeks, from mid February until mid
+April.
+
+The next sub problem to be address it will be the churn prediction, which is the
+users that were in the original dataset but will not be present on the generated
+data set. This will be stage~\ref{itm:task2} which represents 6 weeks of work,
+the first 2 weeks are shared with the stage~\ref{itm:task1} since the problem
+address there also helps to solve this problem.
+
 
 
 %PLANEAR COMO DISTRIBUIR AS FASES e pôr mais lodo em cada uma
