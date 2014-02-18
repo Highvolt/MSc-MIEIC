@@ -276,21 +276,21 @@ R is a GNU tool, so it is completely free. There are wrappers to almost every la
 
 \section{Model Evaluation Procedures and Measures}
 
-To verify if a created model is valid an additional step to validate the data is
-needed. This step can be divided into evaluation procedures, which normally
-consist in dividing the original dataset into training and testing subsets, and
+To verify if a created model is valid it is necessary an additional step to validate the data.
+This step can be divided into evaluation procedures, which normally
+consists of dividing the original dataset into training and testing subsets, and
 evaluation measures in order to assess the quality of our model.
 
 \subsection{Cross-Validation (Procedure)}
 
 This model consists of dividing the dataset in parts \cite{Witten:2005:DMP:1205860}
-, some of these parts will be used to train the model, the other part will only
-be shown in the validation part, so we are able to access if the model is able to
+. Some of these parts will be used to train the model and other parts will only
+be used in the validation part, so that we can assess if the model is able to
 generalize the result or not. 
 
 \subsubsection{Sliding Window}
 
-This procedure selects its training data and validation data mantaining the
+This procedure selects its training data and validation data maintaining the
 chronological order of the data set\cite{Bensch_self-learningprediction}.
 
 \begin{figure}[!h]
@@ -303,16 +303,16 @@ chronological order of the data set\cite{Bensch_self-learningprediction}.
 \end{figure}
 \FloatBarrier
 
-In figure~\ref{fig:swin}, it possible to see that the validation data is always
-\textit{future} data, when compared to the training data.
+In figure~\ref{fig:swin}, it possible to see that the validation data happens
+after the training data in a temporal point of view.
 
 
 \subsection{Precision (Measure)}
 
-Precision is a metric to identify the fraction of positives that are corrected
-classified as so. In other others using this we can identify how relevant the
-results of the algorithm are (if the precision value is high more relevant the
-results are). The equation to calculate precision is presented next.
+Precision is a metric to identify the fraction of positives that are correctly
+classified as so. In other words, using this measure, we can identify how relevant the
+results given by the algorithm are (the more higher the value, the more relevant
+the results are). The equation to calculate precision is presented next:
 
 \begin{center}
 \Large
@@ -326,9 +326,9 @@ Precision = \frac{\text{true positives}}{\text{true positives + false positives}
 \subsection{Recall (Measure)}
 
 This measure represents the part of actual positive results in the dataset that
-where identified as such. In other words, recall is the fraction of positive
-objects that were correctly identified from all the positive objects. This
-metric is calculated using the following expression.
+were identified as such. In other words, recall is the fraction of positive
+objects that were correctly identified by the algorithm from all the positive objects in the
+dataset. This metric is calculated using the following expression:
 
 \begin{center}
 \Large
@@ -341,7 +341,7 @@ Recall = \frac{\text{true positives}}{\text{true positives + false negatives}}
 \subsection{Accuracy (Measure)}
 
 Accuracy represents the percentage of results that are actually correct. This
-measure can be calculated as follows.
+measure can be calculated as follows:
 
 \begin{center}
 \Large
@@ -354,10 +354,10 @@ Accuracy = \frac{\text{true positives + true negatives}}{\text{true positives + 
 
 \subsection{F-Measure}
 
-F-Mesasure or F-Score or F\begin{math}_1 \end{math} measures the test accuracy relying in both recall
+F-Measure or F-Score or F\begin{math}_1 \end{math} measures the test accuracy relying in both recall
 and precision. The best value of this function is 1 and the worst is 0.
-F-Measure is the harmonic mean of the precision and recall an can be defined as
-it follows.
+F-Measure is the harmonic mean of the precision and recall and can be defined as
+it follows:
 
 \begin{center}
 \Large
@@ -367,8 +367,8 @@ F_1 = 2 * \frac{precision*recall}{precision+recall}
 \normalsize
 \end{center}
 
-The reason behind the utilization of harmonic mean insetead of arithmetic mean
-is given to the more intuitive result \cite{sasaki2007truth}.
+The reason behind the utilization of the harmonic mean instead of the arithmetic mean
+is given due to a more intuitive result \cite{sasaki2007truth}.
 
 
 
@@ -376,45 +376,46 @@ is given to the more intuitive result \cite{sasaki2007truth}.
 
 \nocite{UjwalaPatil}
 
-The main area which this project focus on the utilization of ad requests logs
+The main area which this project focus on is the utilization of ad requests logs
 to predict future requests of the users. This is analogous to work
 which have been done in the area of user future requests prediction.
-Next it will be done a little overview of what have been studying in the area of web
-usage data mining, in the last years, in order to identify possible approaches
+Next, it will be done a little overview of what has been studying in the area of web
+usage data mining in the past years, in order to identify possible approaches
 to solve the problem of this thesis.
 
 \paragraph{}
 
-In the area of pre-fetching web pages \cite{Nanopoulos01effectiveprediction} have
-been proposed a new algorithm WM\begin{math}_0\end{math}, this algorithm takes into
-account order between accesses and other specificities of the area. This
+In the area of pre-fetching web pages \cite{Nanopoulos01effectiveprediction}, it
+has been proposed a new algorithm, WM\begin{math}_0\end{math}, which takes into
+account the order between accesses and other specificities of the area. This
 algorithm gets good results for accuracy even when compared to other methods
-\emph{Prediction-by-Partial-Match} (PPM) and \emph{Dependency Graph} (DG).
+like \emph{Prediction-by-Partial-Match} (PPM) and \emph{Dependency Graph} (DG).
 
 \paragraph{}
 
 In another paper \cite{Gery:2003:EWU:956699.956716}, three approaches to
-data mine from web logs are proposed. \textbf{Association Rule} (AR), association rule
-learning is a very popular data mining algorithm to find relationships between
+data mine from web logs are proposed. \textbf{Association Rule} (AR) is based on association rule
+learning which is a very popular data mining algorithm to find relationships between
 variables. The problem of finding web pages together in a web log is similar to
-that problem. \textbf{Frequent Sequences} (FS), this technique tries to find time
+that problem. \textbf{Frequent Sequences} (FS), is a technique that tries to find time
 ordered sequences of URLs that have been followed by past users.
-\textbf{Frequent Generalized Sequences} (FGS), a generalized sequence is a
-sequence which allows wild cards, in other to represent a user flow of
+\textbf{Frequent Generalized Sequences} (FGS) involves the utilization of a
+generalized sequence, which is a
+sequence that allows wild cards in order to represent a user flow of
 navigation in a more flexible way. 
-Some testes have been made by the author \cite{Gery:2003:EWU:956699.956716} to
+Some tests have been made by the author \cite{Gery:2003:EWU:956699.956716} to
 test the performance of this three methods using real web logs. According to the
-results FS gives better accuracy than AR and FGS.
+results given by FS, FS has better accuracy than AR and FGS.
 
 \paragraph{}
 
-In another paper, other author, proposes a model that preserves sequentiality of
-the clicks \cite{Frias-Martinez2003}. The rules maintain the squence of the
+In another paper, other author proposes a model that preserves sequentiality of
+the clicks \cite{Frias-Martinez2003}. The rules maintain the sequence of the
 click stream between the antecedent and the consequent, to maintain sequentiality.
-This model also introduces the concept of temporally which is reflected by the
+This model also introduces the concept of temporality, which is reflected by the
 distance between the consequent and antecedent by number of clicks to go from one
 to the other. This rule is very important because it allows not only to find
-which page will go to be accessed but when will it be accessed. The proposed
+which page is  going to be accessed but also when will it be accessed. The proposed
 model, \textbf{Customizable Sequential Behavior Model}, can be adapted depending
 on the characteristics of the server, in order to capture the behavior of the
 users more accurately.
@@ -423,29 +424,30 @@ users more accurately.
 
 There is another approach that relies on the sequentially of the clicks
 \cite{Jan:2007:WUB:1353862.1353874}.
-This method uses the prefix set of web pages (pages that the user already had
-visited) to predict a postfix set (next pages that the user will visit), to
-select this pages the algorithm uses a confidence threshold to select the pages
-to the postfix set form historical data.
+This method uses the prefix set of web pages (pages that the user had already
+visited) to predict a postfix set (next pages that the user will visit).
+To select this pages, the algorithm uses a confidence threshold to select the pages
+to the postfix set from historical data.
+
 
 \paragraph{}
 
 The classification algorithm \textbf{Longest Common Subsequence} (LCS)
-\cite{4631852} it is also been used in web usage mining. In this case the author
-proposes a two part architecture, an offline part where knowledge is extracted
+\cite{4631852} it is also been used in web usage mining. In this case, the author
+proposes a two part architecture: an offline part where knowledge is extracted
 from the historical data and an online part where this knowledge is used to
-predict next visits of the user. The prediction is done in the online part by
+predict the next visits of the user. The prediction is done in the online part by
 appending the last request from the user to the history and using LCS. This
 architecture is implemented in \textbf{WebPum} \cite{Jalali20106201} by the same
-authors, this architecture improves the accuracy by a little margin from the
-previous method SUGGEST 3.0 \cite{1410804}, in next pages recommendations.
+authors and improves the accuracy by a little margin from the
+previous method, SUGGEST 3.0 \cite{1410804}, in the field of next page recommendations.
 
 \paragraph{}
 
-In a more recent paper a method combining Markov model based sequential pattern
+In other paper a method combining Markov model based sequential pattern
 mining with clustering is proposed \cite{Anitha_anew}. This combination gets
-about 12\% more accuracy when compared with traditional Markov model.
-The proposed models combines great accuracy from high order Markov Models with
+about 12\% more accuracy when compared with the traditional Markov model.
+The proposed models combine great accuracy from high order Markov Models with
 less space complexity from low order Markov models.
 
 
