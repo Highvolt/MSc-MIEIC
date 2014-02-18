@@ -274,6 +274,103 @@ greatly used by statistics and data miners.
 R is an implementation of S, the statistics programming language, and it uses some characteristics inspired on Scheme.
 R is a GNU tool, so it is completely free. There are wrappers to almost every language which can be used to access R variables from other programming languages.
 
+\section{Model Evaluation Procedures and Measures}
+
+To verify if a created model is valid an additional step to validate the data is
+needed. This step can be divided into evaluation procedures, which normally
+consist in dividing the original dataset into training and testing subsets, and
+evaluation measures in order to assess the quality of our model.
+
+\subsection{Cross-Validation (Procedure)}
+
+This model consists of dividing the dataset in parts \cite{Witten:2005:DMP:1205860}
+, some of these parts will be used to train the model, the other part will only
+be shown in the validation part, so we are able to access if the model is able to
+generalize the result or not. 
+
+\subsubsection{Sliding Window}
+
+This procedure selects its training data and validation data mantaining the
+chronological order of the data set\cite{Bensch_self-learningprediction}.
+
+\begin{figure}[!h]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.66\textwidth]{swin}
+    \caption{Sliding window validation}\cite{Bensch_self-learningprediction}
+    \label{fig:swin}
+  \end{center}
+\end{figure}
+\FloatBarrier
+
+In figure~\ref{fig:swin}, it possible to see that the validation data is always
+\textit{future} data, when compared to the training data.
+
+
+\subsection{Precision (Measure)}
+
+Precision is a metric to identify the fraction of positives that are corrected
+classified as so. In other others using this we can identify how relevant the
+results of the algorithm are (if the precision value is high more relevant the
+results are). The equation to calculate precision is presented next.
+
+\begin{center}
+\Large
+\begin{math}
+Precision = \frac{\text{true positives}}{\text{true positives + false positives}}
+\end{math}
+\normalsize
+\end{center}
+
+
+\subsection{Recall (Measure)}
+
+This measure represents the part of actual positive results in the dataset that
+where identified as such. In other words, recall is the fraction of positive
+objects that were correctly identified from all the positive objects. This
+metric is calculated using the following expression.
+
+\begin{center}
+\Large
+\begin{math}
+Recall = \frac{\text{true positives}}{\text{true positives + false negatives}}
+\end{math}
+\normalsize
+\end{center}
+
+\subsection{Accuracy (Measure)}
+
+Accuracy represents the percentage of results that are actually correct. This
+measure can be calculated as follows.
+
+\begin{center}
+\Large
+\begin{math}
+Accuracy = \frac{\text{true positives + true negatives}}{\text{true positives + false positives + true negatives + false negatives}}
+\end{math}
+\normalsize
+\end{center}
+
+
+\subsection{F-Measure}
+
+F-Mesasure or F-Score or F\begin{math}_1 \end{math} measures the test accuracy relying in both recall
+and precision. The best value of this function is 1 and the worst is 0.
+F-Measure is the harmonic mean of the precision and recall an can be defined as
+it follows.
+
+\begin{center}
+\Large
+\begin{math}
+F_1 = 2 * \frac{precision*recall}{precision+recall}
+\end{math}
+\normalsize
+\end{center}
+
+The reason behind the utilization of harmonic mean insetead of arithmetic mean
+is given to the more intuitive result \cite{sasaki2007truth}.
+
+
 
 \section{Web Usage Mining}\label{sec:network}
 
@@ -286,12 +383,15 @@ Next it will be done a little overview of what have been studying in the area of
 usage data mining, in the last years, in order to identify possible approaches
 to solve the problem of this thesis.
 
+\paragraph{}
 
 In the area of pre-fetching web pages \cite{Nanopoulos01effectiveprediction} have
 been proposed a new algorithm WM\begin{math}_0\end{math}, this algorithm takes into
 account order between accesses and other specificities of the area. This
 algorithm gets good results for accuracy even when compared to other methods
 \emph{Prediction-by-Partial-Match} (PPM) and \emph{Dependency Graph} (DG).
+
+\paragraph{}
 
 In another paper \cite{Gery:2003:EWU:956699.956716}, three approaches to
 data mine from web logs are proposed. \textbf{Association Rule} (AR), association rule
@@ -306,6 +406,8 @@ Some testes have been made by the author \cite{Gery:2003:EWU:956699.956716} to
 test the performance of this three methods using real web logs. According to the
 results FS gives better accuracy than AR and FGS.
 
+\paragraph{}
+
 In another paper, other author, proposes a model that preserves sequentiality of
 the clicks \cite{Frias-Martinez2003}. The rules maintain the squence of the
 click stream between the antecedent and the consequent, to maintain sequentiality.
@@ -317,12 +419,16 @@ model, \textbf{Customizable Sequential Behavior Model}, can be adapted depending
 on the characteristics of the server, in order to capture the behavior of the
 users more accurately.
 
+\paragraph{}
+
 There is another approach that relies on the sequentially of the clicks
 \cite{Jan:2007:WUB:1353862.1353874}.
 This method uses the prefix set of web pages (pages that the user already had
 visited) to predict a postfix set (next pages that the user will visit), to
 select this pages the algorithm uses a confidence threshold to select the pages
 to the postfix set form historical data.
+
+\paragraph{}
 
 The classification algorithm \textbf{Longest Common Subsequence} (LCS)
 \cite{4631852} it is also been used in web usage mining. In this case the author
@@ -333,6 +439,8 @@ appending the last request from the user to the history and using LCS. This
 architecture is implemented in \textbf{WebPum} \cite{Jalali20106201} by the same
 authors, this architecture improves the accuracy by a little margin from the
 previous method SUGGEST 3.0 \cite{1410804}, in next pages recommendations.
+
+\paragraph{}
 
 In a more recent paper a method combining Markov model based sequential pattern
 mining with clustering is proposed \cite{Anitha_anew}. This combination gets
