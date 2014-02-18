@@ -10,23 +10,25 @@ It will also be explained the datasets that will be used in the project.
 Given that the preparation phase is already finished, there will be approximately 5 months for the realization of the dissertation.
 That corresponds to a time frame between February 2014 and July 2014.
 
-For what have been seen before this problem is rather complex. So to better
-address it, can be decomposed in smaller and simpler problems, such as:
+From what has been previously stated, this problem is rather complex. In order to better
+address it, it can be decomposed in smaller and simpler problems, such as:
 \begin{itemize}
     \item Predict individuals of the original population which will reappear in the future. Future reappearances need to be completely characterized, including 
       all the parameters that compose an entry in the dataset, but transposed to the future. The value of each parameter must be valid and obey to the parameter
-      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identificationof users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
+      rules, these rules are not hard-coded or explained at the beginning and must be inferred from the original data set. Solving this sub-problem also implies the identification
+      of the users who won't appear in future entries. Recurrence of users will be the first sub-problem to be addressed in this dissertation work. 
       Clustering algorithms will be explored to predict churn users and instance-based algorithms to select future entries. A more detailed information
-      on this problem will be presented on chapter~\ref{chap:sota}.
+      on this problem was presented on chapter~\ref{chap:sota}.
     \item Predict new instances which had never appeared in the past entries of the dataset.
       These instances will represent new user entries and, to predict the profile of each user, it will be used classification algorithms, in order to select 
-      which past entries are relevant. Further information about these methods will be presented in
+      which past entries are relevant. Further information about these methods
+      was presented in
       chapter~\ref{chap:sota}.
 \end{itemize}
 
 In order to complete the dissertation in the given time, it will be given more emphasis to the
 prediction of churn users and the prediction of users that continue in the
-future. Leaving the prediction of new instances for a later part of the
+future, leaving the prediction of new instances for a later part of the
 development of this dissertation.
 
 \begin{figure}[h]
@@ -80,7 +82,7 @@ The planning is divided in the four following stages, as we can see in figure~\r
   \item\label{itm:task4} Writing of the dissertation.
 \end{enumerate}
 
-The problem of predict which users present in the original dataset will remain
+The problem of predicting which users, present in the original dataset, will remain
 in the future will be addressed in stage~\ref{itm:task1}. To complete the
 information generated on this stage it is also needed to forecast the value of
 each parameter that represents an entry on the ad request log file. The period
@@ -88,26 +90,26 @@ alloted for the completion of this stage is 8 weeks, from mid February until mid
 April.
 
 The next sub problem to be address it will be the churn prediction, which is the
-users that were in the original dataset but will not be present on the generated
-data set. This will be stage~\ref{itm:task2} which represents 6 weeks of
+identification of the users that were in the original dataset but will not be present on the generated
+data set. This will be stage~\ref{itm:task2}i, which represents 6 weeks of
 work, from beginning of April to mid May,
-the first 2 weeks are shared with the stage~\ref{itm:task1} since the problem
-address there also helps to solve this problem.
+where the first 2 weeks are shared with the stage~\ref{itm:task1}, since the problem
+addressed there also helps to solve this problem.
 
-The stage~\ref{itm:task3} will be focus in generate new users to complete the
+The stage~\ref{itm:task3} will focus on the generation of new users, to complete the
 generated log file on the previous steps. This stage will last for about 4
-weeks, starting in the first week of May and ending on first week of June, the first 2
+weeks, starting in the first week of May and ending on first week of June, where the first 2
 weeks will be shared with the task of finding users that dropout. The last 2
 weeks will also be shared with stage~\ref{itm:task4}.
 
 Stages \ref{itm:task1}, \ref{itm:task2} and \ref{itm:task3} also include test
-and validation of the results obtained. In this stages there will also take part
+and validation of the obtained results. In this stages, there will also take part
 a better study and selection of the algorithms that are going to be used.
 
-The last stage~\ref{itm:task4}, the longest one, will be the writing of the
-dissertation. For this part the period alloted is 16 weeks, divided in two
-phases, the first 6 weeks (lighter area) will be only adding notes and little changes to the
-dissertation, on the other 10 weeks (darker area) the work will be almost exclusively dedicated
+The longest and last stage, stage~\ref{itm:task4}, will consist on the writing of the
+dissertation. For this part, the period alloted is 16 weeks, divided in two
+phases, where the first 6 weeks (lighter area) will be only adding notes and little changes to the
+dissertation and on the other 10 weeks (darker area) the work will be almost exclusively dedicated
 to the writing of the final document.
 
 
@@ -117,12 +119,12 @@ In order to get performance results of the different methods and models,
 multiple datasets containing records of ad requests will be used. The parameters
 present in the datasets will variate from one source to another. Normally all
 the datasets will have per entry a timestamp, an user ID, a location ID and an
-URL plus an unknown number of additional parameters, such as cookies, etc.
+URL, plus an unknown number of additional parameters, such as cookies, etc.
 Every dataset will be used separately.
 
 \section{Thesis Work Evaluation}
 
-Every proposed algorithm will be tested against multiple datasets. For each
-multiple performance measures will be made, such as accuracy, time taken,
+Every proposed algorithm will be tested against multiple datasets. To each
+algorithm, multiple performance measures will be made, such as accuracy, time taken,
 accuracy/time, these results will be compared with other tested algorithms and
 the results provided by ShiftForward of theirs algorithm.
