@@ -10,31 +10,32 @@ This industry is always trying to get more efficient by getting more profit from
 Web users are the major assets of this industry, which makes money by exploiting the user behavior and characteristics, in order to target them with the
 perfect campaign. Each campaign has its own target parameters, which limit the target user universe.
 Online marketing industry core business is centered in web users and this industry has recorded almost every footprint each user makes on the web.
-Future footprints of the web users allows the measure of the behavior of a upcoming campaign and, with this data, it is possible to make a campaign more
+Future footprints of the web users allows the measurement of the behavior of an upcoming campaign and, with this data, it is possible to make a campaign more
 effective and more profitable. Therefore, using future user data allows the adtech industry to be able to fine tune its campaigns. 
 Campaigns are composed by parameter definitions and rules and can be defined as
-queries over the ad requests data. So the ideal way to forecast the effectiveness
-of a campaign is by running these queries over generated ad requests data. This
-is why is so important to be able to generate future ad requests data.
+queries over the ad requests' data. Thus, the ideal way to forecast the effectiveness
+of a campaign is by running these queries over generated ad requests' data. This
+is why is so important to be able to generate future ad requests' data.
 
-The most common platforms that will benefit from this data are Custom-built Ad
-Servers and \hyperref[itm:adex]{Exchanges}, \hyperref[itm:ssp]{Sell-side platforms} (SSPs) and
-\hyperref[itm:dsp]{Demand-side platforms}
-(DSPs). These platforms are further explored section~\ref{sec:adover}.
+The most common platforms that will benefit from this data are Custom-Built Ad
+Servers and \hyperref[itm:adex]{Exchanges}, \hyperref[itm:ssp]{Sell-Side Platforms} (SSPs) and
+\hyperref[itm:dsp]{Demand-Side Platforms}
+(DSPs). These platforms are further explored in section~\ref{sec:adover}.
 
 
 \section{Project} \label{sec:proj}
 
 The main objective of this project is to develop a library capable of generating
-future ad requests logs from recorded past requests.
-To solve this problem multiple data mining classification and clustering
+future ad requests' logs from past recorded requests.
+To solve this problem, multiple data mining classification and clustering
 techniques will be explored in order to find the fastest and more accurate way
 to do it. 
-This generator will use real ad request logs from various sources in CSV files.
+This generator will use real ad request' logs from various sources stored in CSV files.
 The generated files will need to respect the same structure as the given file.
 
-The focus of this thesis is only one part of a more complex problem, the
-forecast the behaviour of campaigns in the future. The resultant ad request log
+The focus of this thesis is generating future ad requests' logs, which is just
+one part of the more complex problem of
+forecasting the behaviour of campaigns in the future. The resultant ad request log
 will be validated using a simulator supplied by ShiftForward.
 
 
@@ -54,10 +55,10 @@ will be validated using a simulator supplied by ShiftForward.
 \section{Motivation and Goals} \label{sec:goals}
 
 In the last few years, the online marketing has been getting more complex. In
-such a way that, today campaigns have a very well defined target sometimes with
+such a way that today campaigns have a very well defined target, sometimes with
 a few hundreds sets of rules and limitations. This poses a big problem to
-simpler prediction models that normally doesn't predict all ad request
-parameters, this way limiting the parameters where queries can be done.
+simpler prediction models that normally don't predict all the parameters of the
+ad request, this way limiting the parameters where queries can be done.
 
 
 Nowadays, some online ads can only be imprinted if a set of very specific requirements has been fulfilled, for example,
@@ -67,17 +68,17 @@ and to be able to get fast responses to complex queries of concurrent campaigns,
 simulate the algorithms executed by ad servers of the client
 and ultimately parallelize the computation of the results for the
 queries,
-predicting the complete future data. This generated data
+the complete future data has to be predicted. This generated data
 can be used in simulations and the online campaigns can run on top of the future population.
 
 The objective of this thesis is to develop a library capable of generating
 future ad request logs using past data from the same network.
-This library will have as one of the main goals the prediction of all the parameters that characterize an
-ad request with the purpose of be able to query over any parameter, the
-generated dataset (ad requests log) must have the same attributes as the original.
+This library will have as one of its main goals the prediction of all the parameters that characterize an
+ad request with the purpose of being able to query over any parameter, in other
+words, the generated dataset (ad requests log) must have the same attributes as the original.
 
-The prediction of this kind of future data is rather complex since it is need to
-find out which users will going to appear in the future and which websites they
+The prediction of this kind of future data is rather complex since it is
+necessary to find out which users will appear in the future and which websites they
 will visit and when will they do it.
 
 \section{Report Structure} \label{sec:struct}
