@@ -153,7 +153,7 @@ made without dimensional limit. In other words, the plane or hyperplane that sep
 
 However, the speed of training and testing is low, even for fastest SVMs.
 It is also directly limited to two-class tasks\cite{Cortes95support-vectornetworks},
-requiring the use of other algorithms to reduce multi-class tasks to binary ones. Although, some work has been done to try to avoid
+requiring to reduce multi-class tasks to binary ones. Although, some work has been done to try to avoid
 decomposing the problem in multiple binary class problems.\cite{Crammer:2002:AIM:944790.944813}
 
 In the past few years, this method is also being used to classify internet traffic with excellent results.\cite{Yuan2010}
@@ -221,12 +221,12 @@ It was created at the University of Waikato, New Zealand in 1997. It has an easy
 \begin{figure}[h]
   \begin{center}
     \leavevmode
-    \includegraphics[width=0.66\textwidth]{weka}
+    \includegraphics[width=0.66\textwidth]{wekaKF}
     \caption{Screenshot of Weka \protect\footnotemark}
     \label{fig:RapidMiner}
   \end{center}
 \end{figure}
-\footnotetext{ \url{http://www.ibm.com/developerworks/library/os-weka1/weka-startup1.jpg}}
+\footnotetext{ \url{http://www.siliconafrica.com/wp-content/themes/directorypress/thumbs//weka.png}}
 
 \subsubsection{Apache Mahout}
 
@@ -281,14 +281,15 @@ This step can be divided into evaluation procedures, which normally
 consists of dividing the original dataset into training and testing subsets, and
 evaluation measures in order to assess the quality of our model.
 
-\subsection{Cross-Validation (Procedure)}
+\subsection{Model Evaluation Procedures}
+\subsubsection{Cross-Validation}
 
 This model consists of dividing the dataset in parts \cite{Witten:2005:DMP:1205860}
 . Some of these parts will be used to train the model and other parts will only
 be used in the validation part, so that we can assess if the model is able to
 generalize the result or not. 
 
-\subsubsection{Sliding Window}
+\paragraph{Sliding Window}
 
 This procedure selects its training data and validation data maintaining the
 chronological order of the data set\cite{Bensch_self-learningprediction}.
@@ -297,7 +298,7 @@ chronological order of the data set\cite{Bensch_self-learningprediction}.
   \begin{center}
     \leavevmode
     \includegraphics[width=0.66\textwidth]{swin}
-    \caption{Sliding window validation}\cite{Bensch_self-learningprediction}
+    \caption{Sliding window validation}
     \label{fig:swin}
   \end{center}
 \end{figure}
@@ -306,8 +307,9 @@ chronological order of the data set\cite{Bensch_self-learningprediction}.
 In figure~\ref{fig:swin}, it possible to see that the validation data happens
 after the training data in a temporal point of view.
 
+\subsection{Model Evaluation Methods}
 
-\subsection{Precision (Measure)}
+\subsubsection{Precision}
 
 Precision is a metric to identify the fraction of positives that are correctly
 classified as so. In other words, using this measure, we can identify how relevant the
@@ -323,7 +325,7 @@ Precision = \frac{\text{true positives}}{\text{true positives + false positives}
 \end{center}
 
 
-\subsection{Recall (Measure)}
+\subsubsection{Recall}
 
 This measure represents the part of actual positive results in the dataset that
 were identified as such. In other words, recall is the fraction of positive
@@ -338,7 +340,7 @@ Recall = \frac{\text{true positives}}{\text{true positives + false negatives}}
 \normalsize
 \end{center}
 
-\subsection{Accuracy (Measure)}
+\subsubsection{Accuracy}
 
 Accuracy represents the percentage of results that are actually correct. This
 measure can be calculated as follows:
@@ -352,7 +354,7 @@ Accuracy = \frac{\text{true positives + true negatives}}{\text{true positives + 
 \end{center}
 
 
-\subsection{F-Measure}
+\subsubsection{F-Measure}
 
 F-Measure or F-Score or F\begin{math}_1 \end{math} measures the test accuracy relying in both recall
 and precision. The best value of this function is 1 and the worst is 0.
@@ -395,7 +397,7 @@ like \emph{Prediction-by-Partial-Match} (PPM) and \emph{Dependency Graph} (DG).
 
 In another paper \cite{Gery:2003:EWU:956699.956716}, three approaches to
 data mine from web logs are proposed. \textbf{Association Rule} (AR) is based on association rule
-learning which is a very popular data mining algorithm to find relationships between
+learning which is a very popular data mining family of algorithms to find relationships between
 variables. The problem of finding web pages together in a web log is similar to
 that problem. \textbf{Frequent Sequences} (FS), is a technique that tries to find time
 ordered sequences of URLs that have been followed by past users.
@@ -432,8 +434,8 @@ to the postfix set from historical data.
 
 \paragraph{}
 
-The classification algorithm \textbf{Longest Common Subsequence} (LCS)
-\cite{4631852} it is also been used in web usage mining. In this case, the author
+An approach based on the \textbf{Longest Common Subsequence} (LCS)
+\cite{4631852} has also been used in web usage mining. In this case, the author
 proposes a two part architecture: an offline part where knowledge is extracted
 from the historical data and an online part where this knowledge is used to
 predict the next visits of the user. The prediction is done in the online part by
@@ -450,5 +452,44 @@ about 12\% more accuracy when compared with the traditional Markov model.
 The proposed models combine great accuracy from high order Markov Models with
 less space complexity from low order Markov models.
 
+\subsection{Web Usage Mining applied to Online Advertising}
 
+Data mining it also being used to predict the response of a user to an online
+ad\cite{chapelle2013simple}. Their main object is to develop a framework that
+can predict the result of an user clicking in an advertising will be based on
+the history that they have.
+The proposed framework use Maximum Entropy\cite{Nigam99usingmaximum}
+because it is easy to implement, can be parallelized and can scale with respect
+to the number of features. It is easy to include model updates in this method.
+In this paper they add a two-phase feature selection algorithm to increase the
+automation and reduce the need of domain expertise (a generalized mutual
+information method to select the feature groups to be included and a feature
+hashing to have the ability of controlling the size of the models.). To their
+experiments the authors used logs with the same parameters as the datasets that
+will be used on this project.
+
+In another approach to same problem improvements in the context of traditional
+supervised learning based on FTRL-proximal online learning algorithm are
+introduced\cite{McMahan:2013:ACP:2487575.2488200}. This paper also explores ways
+to save memory during the prediction using filters to select features to be
+included in the model such as \emph{Poisson Inclusion} and \emph{Bloom Filter
+Inclusion} and they concluded that the method which allows better savings
+without loosing much prediction accuracy is \emph{Bloom Filter Inclusion}. To
+the solve the memory problem they also test encoding values with fewer bits and
+other techniques.
+
+In yet another paper about CTR prediction
+\cite{Tagami:2013:CPC:2501040.2501978}, a two stage approach is used, the first
+stage the contruction of a ranking model with the clicked ad requests and then a
+sigmoid function converts the value of the ranking model into CTR. The method
+proposed achieves better results in terms of AUC, MSE and LogLoss when compared
+to L2-loss linear SVM, logistic regression with only the clicked ad requests and
+logistic regression with all the ad requests.
+
+In the area of forecasting ad impressions, a Bayes network was used to capture
+inter-dependencies between the query traffic features and the competitors in the
+auction\cite{nath2013ad}. This method is used to forecast the number of
+impressions of the ad to a certain keyword based on the bid that is done. Their
+method, Generative Model based Ad Impression Forecasting Method, get better
+results in terms of accuracy when compared to Normalized Bid Model. 
 %\subsection{Instance-based regression algorithms}\label{sec:instance}

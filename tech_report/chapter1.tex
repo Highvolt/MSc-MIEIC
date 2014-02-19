@@ -4,18 +4,24 @@
 \section{Context and Framing} \label{sec:context}
 
 The online marketing is a growing multibillion-dollar industry \cite{PricewaterhouseCoopers2013}
-which is expected to continue its fast growth.\cite{PricewaterhouseCoopers2013a}
+which is expected to continue its fast growth\cite{PricewaterhouseCoopers2013a}.
 
-This industry is always trying to get more efficient by getting more profit from assets it already own. 
+This industry is always trying to get more efficient by getting more profit from
+assets it already owns. 
 Web users are the major assets of this industry, which makes money by exploiting the user behavior and characteristics, in order to target them with the
 perfect campaign. Each campaign has its own target parameters, which limit the target user universe.
 Online marketing industry core business is centered in web users and this industry has recorded almost every footprint each user makes on the web.
-Future footprints of the web users allows the measurement of the behavior of an upcoming campaign and, with this data, it is possible to make a campaign more
-effective and more profitable. Therefore, using future user data allows the adtech industry to be able to fine tune its campaigns. 
-Campaigns are composed by parameter definitions and rules and can be defined as
-queries over the ad requests' data. Thus, the ideal way to forecast the effectiveness
-of a campaign is by running these queries over generated ad requests' data. This
-is why is so important to be able to generate future ad requests' data.
+Future footprints of the web users allows the measurement of the behavior of an
+upcoming campaign and, with this data, it is possible to make the inventory more
+profitable. Therefore, using future user data allows the adtech industry to be able to fine tune its campaigns. 
+Campaigns are composed by a series of ads that share the same main idea that
+want to transmit. The campaigns have a targeting typically defined as a set of
+parameter definitions and rules. To be able to run the campaigns in a
+simulator, their targeting can be defined as
+queries over the ad requests' data. The utilization of a simulation allows to
+get the results fast, test concurrent campaigns and test multiple scenarios.
+The utilization of a simulation is the main reason behind
+why is so important to be able to generate future ad requests' data.
 
 The most common platforms that will benefit from this data are Custom-Built Ad
 Servers and \hyperref[itm:adex]{Exchanges}, \hyperref[itm:ssp]{Sell-Side Platforms} (SSPs) and
@@ -30,7 +36,7 @@ future ad requests' logs from past recorded requests.
 To solve this problem, multiple data mining classification and clustering
 techniques will be explored in order to find the fastest and more accurate way
 to do it. 
-This generator will use real ad request' logs from various sources stored in CSV files.
+This generator will use real ad request' logs from various sources stored in files.
 The generated files will need to respect the same structure as the given file.
 
 The focus of this thesis is generating future ad requests' logs, which is just
@@ -55,8 +61,8 @@ will be validated using a simulator supplied by ShiftForward.
 \section{Motivation and Goals} \label{sec:goals}
 
 In the last few years, the online marketing has been getting more complex. In
-such a way that today campaigns have a very well defined target, sometimes with
-a few hundreds sets of rules and limitations. This poses a big problem to
+such a way that today campaigns have a very well defined target, with
+sets of rules and limitations. This poses a big problem to
 simpler prediction models that normally don't predict all the parameters of the
 ad request, this way limiting the parameters where queries can be done.
 
