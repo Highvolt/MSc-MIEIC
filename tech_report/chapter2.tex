@@ -454,36 +454,36 @@ less space complexity from low order Markov models.
 
 \subsection{Web Usage Mining applied to Online Advertising}
 
-Data mining it also being used to predict the response of a user to an online
-ad\cite{chapelle2013simple}. Their main object is to develop a framework that
-can predict the result of an user clicking in an advertising will be based on
+Data mining is also being used to predict the response of an user to an online
+ad\cite{chapelle2013simple}. Their main objective is to develop a framework that
+can predict the result of an user clicking in an advertising, based on
 the history that they have.
-The proposed framework use Maximum Entropy\cite{Nigam99usingmaximum}
-because it is easy to implement, can be parallelized and can scale with respect
+The proposed framework uses Maximum Entropy\cite{Nigam99usingmaximum}
+because it is easy to implement, can be parallelized and scaled with respect
 to the number of features. It is easy to include model updates in this method.
-In this paper they add a two-phase feature selection algorithm to increase the
+In this paper, they add a two-phase feature selection algorithm, to increase the
 automation and reduce the need of domain expertise (a generalized mutual
 information method to select the feature groups to be included and a feature
-hashing to have the ability of controlling the size of the models.). To their
-experiments the authors used logs with the same parameters as the datasets that
+hashing to have the ability of controlling the size of the models). To their
+experiments, the authors used logs with the same parameters as the datasets that
 will be used on this project.
 
-In another approach to same problem improvements in the context of traditional
-supervised learning based on FTRL-proximal online learning algorithm are
-introduced\cite{McMahan:2013:ACP:2487575.2488200}. This paper also explores ways
-to save memory during the prediction using filters to select features to be
-included in the model such as \emph{Poisson Inclusion} and \emph{Bloom Filter
-Inclusion} and they concluded that the method which allows better savings
-without loosing much prediction accuracy is \emph{Bloom Filter Inclusion}. To
-the solve the memory problem they also test encoding values with fewer bits and
+In another approach to the same problem are introduced improvements in the context of traditional
+supervised learning based on FTRL-proximal online learning algorithm
+\cite{McMahan:2013:ACP:2487575.2488200}. This paper also explores ways
+to save memory during the prediction, using filters to select features to be
+included in the model, such as \emph{Poisson Inclusion} and \emph{Bloom Filter
+Inclusion}, and they concluded that the method which allows better savings,
+without loosing much prediction accuracy, is \emph{Bloom Filter Inclusion}. To
+solve the memory problem they also tested encoding values with fewer bits and
 other techniques.
 
-In yet another paper about CTR prediction
+In yet another paper about CTR(Click-Through-Rate) prediction
 \cite{Tagami:2013:CPC:2501040.2501978}, a two stage approach is used, the first
-stage the contruction of a ranking model with the clicked ad requests and then a
-sigmoid function converts the value of the ranking model into CTR. The method
+stage being the construction of a ranking model with the clicked ad requests and then a
+sigmoid function converting the value of the ranking model into CTR. The method
 proposed achieves better results in terms of AUC, MSE and LogLoss when compared
-to L2-loss linear SVM, logistic regression with only the clicked ad requests and
+to: L2-loss linear SVM, logistic regression with only the clicked ad requests and
 logistic regression with all the ad requests.
 
 In the area of forecasting ad impressions, a Bayes network was used to capture
